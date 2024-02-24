@@ -1,0 +1,233 @@
+format = '''
+$sudo$fill$git_branch$git_status$git_metrics$fill
+$character
+'''
+right_format = """
+$username
+$hostname
+$directory
+$cmd_duration
+$time
+"""
+
+[fill]
+symbol = '-'
+style = 'green'
+
+[character]
+success_symbol = '[➜ ](black)'
+error_symbol = '[➜ ](black)'
+vimcmd_symbol = '[ ](green)'
+vimcmd_replace_one_symbol = '[R](yellow)'
+vimcmd_replace_symbol = '[R](yellow)'
+vimcmd_visual_symbol = '[V](yellow)'
+
+[username]
+style_user = 'black'
+style_root = 'red'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[@](green)[$hostname]($style) '
+style = 'black'
+trim_at = '.'
+disabled = false
+
+[directory]
+truncation_length = 8
+truncate_to_repo = true
+read_only = ' '
+read_only_style = 'red'
+style = 'green'
+
+[cmd_duration]
+min_time = 0
+show_milliseconds = true
+disabled = false
+format = '[$duration]($style) '
+style = 'black'
+show_notifications = false
+min_time_to_notify = 10_000
+
+[time]
+disabled = false
+format = '[$time]($style)'
+style = 'black'
+time_format = '%T'
+use_12hr = false
+
+[git_branch]
+disabled = false
+format = '[|](green)[$symbol$branch(:$remote_branch)](black)'
+
+[git_status]
+disabled = false
+ignore_submodules = false
+format = '( [\[$all_status$ahead_behind\]](black))'
+
+[git_metrics]
+disabled = false
+only_nonzero_diffs = true
+ignore_submodules = false
+format = '([ +$added](black))([ -$deleted](black))[|](green)'
+
+[sudo]
+disabled = false
+format = '[$symbol]($style)'
+symbol = '[|](green)'
+
+[git_commit]
+disabled = true
+
+[git_state]
+disabled = true
+
+[aws]
+disabled = true
+
+[bun]
+disabled = true
+
+[c]
+disabled = true
+
+[cmake]
+disabled = true
+
+[cobol]
+disabled = true
+
+[conda]
+disabled = true
+
+[crystal]
+disabled = true
+
+[daml]
+disabled = true
+
+[dart]
+disabled = true
+
+[deno]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[dotnet]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[erlang]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[golang]
+disabled = true
+
+[haskell]
+disabled = true
+
+[helm]
+disabled = true
+
+[hg_branch]
+disabled = true
+
+[java]
+disabled = true
+
+[julia]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[kubernetes]
+disabled = true
+
+[lua]
+disabled = true
+
+[memory_usage]
+disabled = true
+
+[meson]
+disabled = true
+
+[nim]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[ocaml]
+disabled = true
+
+[openstack]
+disabled = true
+
+[package]
+disabled = true
+
+[perl]
+disabled = true
+
+[php]
+disabled = true
+
+[pulumi]
+disabled = true
+
+[purescript]
+disabled = true
+
+[python]
+disabled = true
+
+[raku]
+disabled = true
+
+[red]
+disabled = true
+
+[ruby]
+disabled = true
+
+[rust]
+disabled = true
+
+[scala]
+disabled = true
+
+[spack]
+disabled = true
+
+[swift]
+disabled = true
+
+[terraform]
+disabled = true
+
+[vagrant]
+disabled = true
+
+[vlang]
+disabled = true
+
+[zig]
+disabled = true

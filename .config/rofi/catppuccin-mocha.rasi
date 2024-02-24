@@ -1,0 +1,117 @@
+* {
+    rosewater:          #f5e0dc;
+    flamingo:           #f2cdcd;
+    pink:               #f5c2e7;
+    mauve:              #cba6f7;
+    red:                #f38ba8;
+    maroon:             #eba0ac;
+    peach:              #fab387;
+    yellow:             #f9e2af;
+    green:              #a6e3a1;
+    teal:               #94e2d5;
+    sky:                #89dceb;
+    sapphire:           #74c7ec;
+    blue:               #89b4fa;
+    lavender:           #b4befe;
+    text:               #cdd6f4;
+    subtext1:           #bac2de;
+    subtext0:           #a6adc8;
+    overlay2:           #9399b2;
+    overlay1:           #7f849c;
+    overlay0:           #6c7086;
+    surface2:           #585b70;
+    surface1:           #45475a;
+    surface0:           #313244;
+    base:               #1e1e2e;
+    mantle:             #181825;
+    crust:              #11111b;
+
+    background-color:   transparent;
+    text-color:         @text;
+
+    margin:             0;
+    padding:            2;
+    spacing:            0;
+}
+
+entry {
+    cursor:             text;
+    vertical-align:     0.5;
+}
+
+window {
+    location:           center;
+    width:              640;
+
+    background-color:   @base;
+}
+
+inputbar {
+    spacing:            8px; 
+    padding:            4px;
+
+    background-color:   @base;
+}
+
+prompt, element-icon, element-text {
+    vertical-align:     0.5;
+}
+
+prompt {
+    text-color:         @base;
+    background-color:   @rosewater;
+    padding:            4px;
+    spacing:            8px;
+}
+
+textbox {
+    padding:            4px;
+    background-color:   @base;
+}
+
+listview {
+    padding:            4px 0;
+    lines:              16;
+    columns:            1;
+
+    fixed-height:       false;
+}
+
+element {
+    orientation:        horizontal;
+    children:           [ element-icon, element-text];
+    padding:            4px;
+    spacing:            8px;
+}
+
+element normal normal {
+    text-color:         @text;
+}
+
+element normal urgent {
+    text-color:         @yellow;
+}
+
+element normal active {
+    text-color:         @rosewater;
+}
+
+element selected {
+    text-color:         @base;
+}
+
+element selected normal, element selected active {
+    background-color:   @rosewater;
+}
+
+element selected urgent {
+    background-color:   @yellow;
+}
+
+element-icon {
+    size:               0.8em;
+}
+
+element-text {
+    text-color:         inherit;
+}

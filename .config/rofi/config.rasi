@@ -1,0 +1,10 @@
+configuration {
+    display-drun: " apps";
+    display-emoji: " emoji";
+    display-calc: "󰪚 calc";
+    drun-display-format: "{name}";
+    modi: "drun,emoji,calc";
+    font: "FiraCode Nerd Font 12";
+}
+
+@theme "/home/tim/.config/rofi/everforest.rasi"

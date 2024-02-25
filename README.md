@@ -83,6 +83,7 @@ sudo ln -sf ~/dotfiles/root/reflector.conf /etc/xdg/reflector/
 
 ### Battery optimisation
 [Youtube video explains!](https://www.youtube.com/watch?v=GDdGK8Z_qzs)
+[das auch sehr wichtig](https://wiki.archlinux.org/title/TLP)
 
 ## some other shit
 

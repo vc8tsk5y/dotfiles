@@ -81,6 +81,9 @@ sudo ln -sf ~/dotfiles/root/00-keyboard.conf-desktop /etc/X11/xorg.conf.d/00-key
 sudo ln -sf ~/dotfiles/root/reflector.conf /etc/xdg/reflector/
 ```
 
+### Battery optimisation
+[Youtube video explains!](https://www.youtube.com/watch?v=GDdGK8Z_qzs)
+
 ## some other shit
 
 ### mimetypes

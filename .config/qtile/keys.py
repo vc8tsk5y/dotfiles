@@ -177,7 +177,7 @@ keys = [
     Key([mod, "shift"], "p", lazy.spawn('flameshot full'), desc="screenshot fullscreen",),
 
     # Sound 
-    Key([], "KP_Insert",
+    Key([mod], "c",
         lazy.function(mic_mute),
         desc="toggle mute default input",
         ),

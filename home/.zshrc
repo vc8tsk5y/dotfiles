@@ -23,7 +23,7 @@ export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.local/bin"
 
 # alias
-alias rm="echo 'use \\\\rm or trash'; false"
+# alias rm="echo 'use \\\\rm or trash'; false"
 alias grep='grep -i --color=auto'
 alias mv='mv -i'
 alias cp='cp -i'

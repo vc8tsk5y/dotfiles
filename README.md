@@ -85,6 +85,10 @@ sudo ln -sf ~/dotfiles/root/reflector.conf /etc/xdg/reflector/
 [Youtube video explains!](https://www.youtube.com/watch?v=GDdGK8Z_qzs)
 [das auch sehr wichtig](https://wiki.archlinux.org/title/TLP)
 
+```bash
+sudo ln -sf ~/dotfiles/root/tlp.conf /etc/
+```
+
 ## some other shit
 
 ### mimetypes

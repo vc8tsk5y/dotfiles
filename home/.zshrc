@@ -34,6 +34,9 @@ alias kssh='kitty +kitten ssh'
 eval "$(starship init zsh)"
 source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# https://github.com/marlonrichert/zsh-autocomplete?tab=readme-ov-file#make-tab-go-straight-to-the-menu-and-cycle-there
+bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+# bindkey -M menu-select '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete # the docs says you need this for me it does nothing than throwing an error
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh

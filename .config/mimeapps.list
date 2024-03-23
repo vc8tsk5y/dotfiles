@@ -6,10 +6,10 @@ image/jpeg=feh.desktop
 
 inode/directory=pcmanfm.desktop
 
-application/pdf=vivaldi-stable.desktop
+application/pdf=firefox.desktop
 
-text/html=vivaldi-stable.desktop
-x-scheme-handler/about=vivaldi-stable.desktop
-x-scheme-handler/http=vivaldi-stable.desktop
-x-scheme-handler/https=vivaldi-stable.desktop
-x-scheme-handler/unknown=vivaldi-stable.desktop
+text/html=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop

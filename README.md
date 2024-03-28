@@ -2,12 +2,6 @@
 
 ## symlinks
 
-### wallpaper
-```bash
-mkdir -p ~/.config/wallpaper &
-ln -sf ~/dotfiles/wallpaper/* ~/.config/wallpaper/
-```
-
 ### qtile
 ```bash
 mkdir -p ~/.config/qtile &
@@ -58,6 +52,8 @@ ln -sf ~/dotfiles/.config/starship.toml ~/.config/
 
 ### .zshrc
 ```bash
+chsh -s /usr/bin/zsh
+sudo chsh -s /usr/bin/zsh
 ln -sf ~/dotfiles/.zshrc ~/
 ```
 

@@ -58,17 +58,17 @@ ln -sf ~/dotfiles/.config/starship.toml ~/.config/
 
 ### .zshrc
 ```bash
-ln -sf ~/dotfiles/home/.zshrc ~/
+ln -sf ~/dotfiles/.zshrc ~/
 ```
 
 ### .xinitrc
 ```bash
-ln -sf ~/dotfiles/home/.xinitrc-desktop ~/.xinitrc
+ln -sf ~/dotfiles/.xinitrc-desktop ~/.xinitrc
 ```
 
 ### .Xresources
 ```bash
-ln -sf ~/dotfiles/home/.Xresources ~/
+ln -sf ~/dotfiles/.Xresources ~/
 ```
 
 ### keyboardlayout

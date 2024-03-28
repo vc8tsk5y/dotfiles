@@ -1,0 +1,22 @@
+paru                                                                            # manual install
+
+git
+neovim
+openssh
+lsd
+man-db
+tldr
+trash-cli
+zsh
+  zsh-autocomplete
+  zsh-autopair-git
+  zsh-autosuggestions
+  zsh-history-substring-search
+  zsh-syntax-highlighting
+  zsh-vi-mode
+  starship
+
+tlp                                                                             # laptop specific
+  tlp-rdw
+  ethtool
+  smartmontools

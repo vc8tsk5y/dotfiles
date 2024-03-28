@@ -7,6 +7,8 @@ lsd
 man-db
 tldr
 trash-cli
+reflector
+neofetch
 zsh
   zsh-autocomplete
   zsh-autopair-git

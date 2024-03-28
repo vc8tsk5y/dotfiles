@@ -2,6 +2,30 @@
 
 ## symlinks
 
+### reflector
+```bash
+sudo cp ~/dotfiles/root/reflector.conf /etc/xdg/reflector/
+sudo systemctl enable reflector.service --now
+```
+
+### .zshrc
+```bash
+chsh -s /usr/bin/zsh
+sudo chsh -s /usr/bin/zsh
+ln -sf ~/dotfiles/.zshrc ~/
+```
+
+### starship
+```bash
+ln -sf ~/dotfiles/.config/starship.toml ~/.config/
+```
+
+### neofetch
+```bash
+mkdir -p ~/.config/neofetch &
+ln -sf ~/dotfiles/.config/neofetch/config.conf ~/.config/neofetch/
+```
+
 ### qtile
 ```bash
 mkdir -p ~/.config/qtile &
@@ -32,29 +56,11 @@ mkdir -p ~/.config/picom &
 ln -sf ~/dotfiles/.config/picom/picom.conf ~/.config/picom/
 ```
 
-### neofetch
-```bash
-mkdir -p ~/.config/neofetch &
-ln -sf ~/dotfiles/.config/neofetch/config.conf ~/.config/neofetch/
-```
-
 ### betterlockscreen
 ```bash
 mkdir -p ~/.config/betterlockscreen &
 ln -sf ~/dotfiles/.config/betterlockscreen/betterlockscreenrc ~/.config/betterlockscreen/ &
 betterlockscreen -u ~/.config/wallpaper/reine-lofoten.jpg # can be swapped for some other wallpaper
-```
-
-### starship
-```bash
-ln -sf ~/dotfiles/.config/starship.toml ~/.config/
-```
-
-### .zshrc
-```bash
-chsh -s /usr/bin/zsh
-sudo chsh -s /usr/bin/zsh
-ln -sf ~/dotfiles/.zshrc ~/
 ```
 
 ### .xinitrc
@@ -70,11 +76,6 @@ ln -sf ~/dotfiles/.Xresources ~/
 ### keyboardlayout
 ```bash
 sudo ln -sf ~/dotfiles/root/00-keyboard.conf-desktop /etc/X11/xorg.conf.d/00-keyboard.conf
-```
-
-### reflector 
-```bash
-sudo ln -sf ~/dotfiles/root/reflector.conf /etc/xdg/reflector/
 ```
 
 ### Battery optimisation
@@ -158,13 +159,6 @@ add line after command above
 @daily /usr/bin/trash-empty 30
 ```
 
-### reflector
-```bash
-systemctl enable reflector.service --now
-```
-
-[arch wiki](https://wiki.archlinux.org/title/reflector)
-
 ### Maintainance!
 
 ```bash
@@ -177,12 +171,10 @@ paccache -duvk0
 paccache -ruvk0
 pacman -Sccd
 paru -Sccd
-# zsh
-zap update all
 # flatpak 
 flatpak update 
 # nvim 
-Lazy sync
+Lazy
 ```
 
 

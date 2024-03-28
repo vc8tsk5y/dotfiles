@@ -1,5 +1,5 @@
 #!/bin/sh
-~/.screenlayout/new.sh &                                                                        # screenlayout
+~/dotfiles/scripts/screenlayout.sh &                                                            # screenlayout
 nitrogen --restore &                                                                            # wallpaper
 picom --experimental-backend &                                                                  # compositor
 greenclip daemon &                                                                              # rofi clipboard manager

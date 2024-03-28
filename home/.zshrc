@@ -24,7 +24,7 @@ alias vim='nvim'
 alias lsd='lsd -lhA --group-dirs first --header'
 
 # Custom aliases
-alias thm='/home/tim/thm-vpn.sh'
+alias thm='~/dotfiles/scripts/thm-vpn.sh'
 alias wttr2='curl v2d.wttr.in/butzbach'
 alias wttrde='curl -H "Accept-Language: de" wttr.in/butzbach'
 alias wttrmap='curl v3.wttr.in/Hessen.sxl'

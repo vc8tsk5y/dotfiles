@@ -1,9 +1,7 @@
 git
 vim
 openssh
-net-tools
 lsd
-acpi --see battery
 man-db
 tldr
 ethtool

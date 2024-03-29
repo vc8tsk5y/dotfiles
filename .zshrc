@@ -15,6 +15,9 @@ unsetopt beep
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.local/bin"
 
+# qt5ct
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 # Aliases
 # General aliases
 alias grep='grep -i --color=auto'

@@ -23,3 +23,7 @@ tlp                                                                             
   tlp-rdw
   ethtool
   smartmontools
+kitty
+hyprland-git
+  hyprcursor-git
+firefox

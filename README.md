@@ -5,6 +5,7 @@
 ### reflector
 ```bash
 sudo cp ~/dotfiles/root/reflector.conf /etc/xdg/reflector/
+
 sudo systemctl enable reflector.service --now
 ```
 
@@ -12,6 +13,7 @@ sudo systemctl enable reflector.service --now
 ```bash
 chsh -s /usr/bin/zsh
 sudo chsh -s /usr/bin/zsh
+
 ln -sf ~/dotfiles/.zshrc ~/
 ```
 
@@ -78,13 +80,15 @@ ln -sf ~/dotfiles/.Xresources ~/
 sudo ln -sf ~/dotfiles/root/00-keyboard.conf-desktop /etc/X11/xorg.conf.d/00-keyboard.conf
 ```
 
-### Battery optimisation
+### Battery optimisation with TLP
 [Youtube video explains!](https://www.youtube.com/watch?v=GDdGK8Z_qzs)
 [das auch sehr wichtig](https://wiki.archlinux.org/title/TLP)
 
 ```bash
 sudo ln -sf ~/dotfiles/root/tlp.conf /etc/
+sudo tlp start
 ```
+important: follow suggestings from error messages
 
 ## some other shit
 
@@ -119,7 +123,7 @@ fi
 
 ### gtk theme
 
-install the theme 
+install the theme
 
 ```bash
 paru everforest-gtk-theme-git

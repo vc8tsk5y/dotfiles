@@ -28,10 +28,22 @@ mkdir -p ~/.config/neofetch &
 ln -sf ~/dotfiles/.config/neofetch/config.conf ~/.config/neofetch/
 ```
 
+### hyprland
+```bash
+mkdir -p ~/.config/hypr &
+ln -sf ~/dotfiles/.config/hypr/hyprland.conf ~/.config/hypr/
+```
+
+### waybar
+```bash
+mkdir -p ~/.config/waybar &
+ln -sf ~/dotfiles/.config/waybar/config.jsonc ~/.config/waybar/
+```
+
 ### qtile
 ```bash
 mkdir -p ~/.config/qtile &
-ln -sf ~/dotfiles/.config/qtile/*.py ~/.config/qtile/ 
+ln -sf ~/dotfiles/.config/qtile/*.py ~/.config/qtile/
 ```
 
 ### dunst

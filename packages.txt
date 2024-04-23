@@ -23,7 +23,48 @@ tlp                                                                             
   tlp-rdw
   ethtool
   smartmontools
-kitty
+
 hyprland-git
   hyprcursor-git
+hyprshot
+dbus-python # needed for the ecampus thm script to make wifi work at thm
+swaync
+xdg-desktop-portal-hyprland
+polkit-kde-agent
+qt5-wayland qt6-wayland
+waybar
+cliphist
+fzf
+rofi-lbonn-wayland-git
+
+jdk-openjdk
+feh
+thunderbird
 firefox
+vesktop
+kitty
+
+pavucontroll maybe unstinstall
+
+
+# fonts
+tesseract-data-eng
+tesseract-data-deu
+ttf-firacode-nerd
+ttf-twemoji
+noto-fonts
+noto-fonts-emoji
+
+
+
+difftastic
+everforest-gtk-theme-git
+firewalld
+flatpak
+mpv
+pcmanfm-gtk3
+rofimoji
+ytdlp-gui
+zathura
+zathura-pdf-mupdf
+qt6ct

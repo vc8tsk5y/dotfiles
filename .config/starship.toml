@@ -1,13 +1,8 @@
 format = '''
-$sudo$fill$git_branch$git_status$git_metrics$fill
+$fill$git_branch$git_status$git_metrics$fill$sudo$username$hostname$directory
 $character
 '''
 right_format = """
-$username
-$hostname
-$directory
-$cmd_duration
-$time
 """
 
 [fill]

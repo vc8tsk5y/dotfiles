@@ -1,4 +1,4 @@
-paru                                                                            # manual install
+paru     # manual install
 
 git
 neovim

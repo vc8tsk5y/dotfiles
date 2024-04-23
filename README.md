@@ -129,7 +129,7 @@ add lines to the end in /etc/zsh/zprofile
 
 ```bash
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    exec startx
+    exec Hyprland
 fi
 ```
 

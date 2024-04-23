@@ -1,9 +1,7 @@
 configuration {
     display-drun: " apps";
-    display-emoji: " emoji";
-    display-calc: "󰪚 calc";
     drun-display-format: "{name}";
-    modi: "drun,emoji,calc";
+    modi: "drun,";
     font: "FiraCode Nerd Font 12";
 }
 

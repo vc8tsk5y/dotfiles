@@ -26,7 +26,7 @@ tlp                                                                             
 
 hyprland-git
   hyprcursor-git
-hyprshot
+grimshot
 dbus-python # needed for the ecampus thm script to make wifi work at thm
 swaync
 xdg-desktop-portal-hyprland

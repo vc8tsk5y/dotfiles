@@ -38,6 +38,7 @@ ln -sf ~/dotfiles/.config/hypr/hyprland.conf ~/.config/hypr/
 ```bash
 mkdir -p ~/.config/waybar &
 ln -sf ~/dotfiles/.config/waybar/config.jsonc ~/.config/waybar/
+ln -sf ~/dotfiles/.config/waybar/style.css ~/.config/waybar/
 ```
 
 ### qtile

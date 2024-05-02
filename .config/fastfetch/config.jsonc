@@ -1,0 +1,129 @@
+{
+    "logo": {
+        "type": "none",
+    },
+    "display": {
+        "separator": "",
+        "keyWidth": 15
+    },
+    "modules": [
+        {
+            "key": "╭───────────╮",
+            "type": "custom",
+            "keyColor": "green"
+        },
+        {
+            "type": "title",
+            "key": "│           │\u001b[11D\u001b[32m user",
+            "keyColor": "green",
+            "format": "\u001b[30m{1}\u001b[32m@\u001b[30m{2}"
+        },
+        {
+            "type": "datetime",
+            "key": "│           │\u001b[11D\u001b[33m date",
+            "keyColor": "green"
+        },
+        {
+            "type": "os",
+            "key": "│           │\u001b[11D\u001b[34m OS",
+            "keyColor": "green"
+        },
+        {
+            "type": "kernel",
+            "key": "│           │\u001b[11D\u001b[35m kernel",
+            "keyColor": "green"
+        },
+        {
+            "type": "packages",
+            "key": "│           │\u001b[11D\u001b[36m packages",
+            "keyColor": "green"
+        },
+        {
+            "type": "wm",
+            "key": "│           │\u001b[11D\u001b[31m WM",
+            "keyColor": "green"
+        },
+        {
+            "type": "terminal",
+            "key": "│           │\u001b[11D\u001b[32m terminal",
+            "keyColor": "green"
+        },
+        {
+            "type": "shell",
+            "key": "│           │\u001b[11D\u001b[33m shell",
+            "keyColor": "green"
+        },
+        {
+            "type": "terminalfont",
+            "key": "│           │\u001b[11D\u001b[34m font",
+            "keyColor": "green"
+        },
+        {
+            "type": "host",
+            "key": "│           │\u001b[11D\u001b[35m󰌢 host",
+            "keyColor": "green"
+        },
+        {
+            "type": "cpu",
+            "key": "│           │\u001b[11D\u001b[36m󰻠 CPU",
+            "keyColor": "green"
+        },
+        {
+            "type": "gpu",
+            "key": "│           │\u001b[11D\u001b[31m󰍛 GPU",
+            "keyColor": "green"
+        },
+        {
+            "type": "disk",
+            "key": "│           │\u001b[11D\u001b[32m disk",
+            "keyColor": "green"
+        },
+        {
+            "type": "memory",
+            "key": "│           │\u001b[11D\u001b[33m memory",
+            "keyColor": "green"
+        },
+        {
+            "type": "swap",
+            "key": "│           │\u001b[11D\u001b[34m󰓡 swap",
+            "keyColor": "green"
+        },
+        {
+            "type": "battery",
+            "key": "│           │\u001b[11D\u001b[35m battery",
+            "keyColor": "green"
+        },
+        {
+            "type": "uptime",
+            "key": "│           │\u001b[11D\u001b[36m󰅐 uptime",
+            "keyColor": "green"
+        },
+        {
+            "type": "localip",
+            "key": "│           │\u001b[11D\u001b[31m󰩟 Local",
+            "keyColor": "green",
+            "format": "{1} ({4})",
+        },
+        {
+            "type": "publicip",
+            "key": "│           │\u001b[11D\u001b[32m󰩠 Public",
+            "keyColor": "green",
+        },
+        {
+            "key": "├───────────┤",
+            "type": "custom",
+            "keyColor": "green"
+        },
+        {
+            "key": "│           │\u001b[11D\u001b[m colors",
+            "type": "colors",
+            "keyColor": "green",
+            "symbol": "circle"
+        },
+        {
+            "key": "╰───────────╯",
+            "type": "custom",
+            "keyColor": "green"
+        }
+    ]
+}

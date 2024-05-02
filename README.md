@@ -22,10 +22,10 @@ ln -sf ~/dotfiles/.zshrc ~/
 ln -sf ~/dotfiles/.config/starship.toml ~/.config/
 ```
 
-### neofetch
+### fastfetch
 ```bash
-mkdir -p ~/.config/neofetch &
-ln -sf ~/dotfiles/.config/neofetch/config.conf ~/.config/neofetch/
+mkdir -p ~/.config/fastfetch &
+ln -sf ~/dotfiles/.config/fastfetch/config.jsonc ~/.config/fastfetch/
 ```
 
 ### hyprland

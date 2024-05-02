@@ -3,13 +3,13 @@ paru     # manual install
 git
 neovim
 openssh
+fzf
 lsd
 man-db
 tldr
 trash-cli
 cronie
 reflector
-neofetch
 zsh
   zsh-autocomplete
   zsh-autopair-git
@@ -18,34 +18,51 @@ zsh
   zsh-syntax-highlighting
   zsh-vi-mode
   starship
+  difftastic
+  firewalld
 
-tlp                                                                             # laptop specific
+# laptop specific
+tlp
   tlp-rdw
   ethtool
   smartmontools
 
 hyprland-git
   hyprcursor-git
-grimshot
+  grimshot
+  swaync
+  xdg-desktop-portal-hyprland
+  polkit-kde-agent
+  qt5-wayland qt6-wayland
+    qt6ct
+  waybar
+  cliphist
+  rofi-lbonn-wayland-git
+    rofimoji
+
+# interesting fixes
 dbus-python # needed for the ecampus thm script to make wifi work at thm
-swaync
-xdg-desktop-portal-hyprland
-polkit-kde-agent
-qt5-wayland qt6-wayland
-waybar
-cliphist
-fzf
-rofi-lbonn-wayland-git
 
 jdk-openjdk
-feh
+R-studio
+
+# gui
 thunderbird
+imv
 firefox
 vesktop
 kitty
+pcmanfm-gtk3
+flatpak
+mpv
+ytdlp-gui
+zathura
+  zathura-pdf-mupdf
 
 pavucontroll maybe unstinstall
 
+# theme
+everforest-gtk-theme-git
 
 # fonts
 tesseract-data-eng
@@ -54,17 +71,3 @@ ttf-firacode-nerd
 ttf-twemoji
 noto-fonts
 noto-fonts-emoji
-
-
-
-difftastic
-everforest-gtk-theme-git
-firewalld
-flatpak
-mpv
-pcmanfm-gtk3
-rofimoji
-ytdlp-gui
-zathura
-zathura-pdf-mupdf
-qt6ct

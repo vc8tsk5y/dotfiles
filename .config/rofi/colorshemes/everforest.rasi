@@ -1,0 +1,117 @@
+* {
+    red:                #e67e80;
+    orange:             #e69875;
+    yellow:             #dbbc7f;
+    green:              #a7c080;
+    blue:               #7fbbb3;
+    aqua:               #83c092;
+    purple:             #d699b6;
+    fg:                 #d3c6aa;
+    bgdim:              #232a2e;
+    bg0:                #2d353b;
+    bg1:                #343f44;
+    bg2:                #3d484d;
+    bg3:                #475258;
+    bg4:                #4f585e;
+    bg5:                #56635f;
+    bgred:              #543a48;
+    bgorange:           #514045;
+    bgyellow:           #4d4c43;
+    bggreen:            #425047;
+    bgblue:             #3a515d;
+    gray0:              #7a8478;
+    gray1:              #859289;
+    gray2:              #9da9a0;
+
+    background-color:   transparent;
+    text-color:         @fg;
+
+    margin:     0;
+    padding:    2;
+    spacing:    0;
+}
+
+entry {
+    cursor: text;
+    vertical-align: 0.5;
+}
+
+window {
+    location:   center;
+    width:      640;
+    border:     2px solid;
+    border-radius:  8px;
+
+    background-color:   @bg0;
+    border-color:       @green;
+}
+
+inputbar {
+    spacing:    8px; 
+    padding:    4px;
+
+    background-color:   @bg0;
+}
+
+prompt, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+prompt {
+    text-color: @fg;
+    background-color:   @bg0;
+    padding:    4px;
+    spacing:    8px;
+}
+
+textbox {
+    padding:            4px;
+    background-color:   @bg1;
+}
+
+listview {
+    padding:    4px 0;
+    lines:      16;
+    columns:    1;
+
+    fixed-height:   false;
+}
+
+element {
+    orientation: horizontal;
+    children: [ element-icon, element-text];
+    padding:    4px;
+    spacing:    8px;
+}
+
+element normal normal {
+    text-color: @fg;
+}
+
+element normal urgent {
+    text-color: @yellow;
+}
+
+element normal active {
+    text-color: @green;
+}
+
+element selected {
+    text-color: @fg;
+}
+
+element selected normal, element selected active {
+    background-color:   @bg1;
+}
+
+element selected urgent {
+    background-color:   @yellow;
+}
+
+element-icon {
+    size:   0.8em;
+}
+
+element-text {
+    text-color: inherit;
+}

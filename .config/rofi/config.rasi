@@ -5,4 +5,4 @@ configuration {
     font: "FiraCode Nerd Font 12";
 }
 
-@theme "/home/tim/.config/rofi/everforest.rasi"
+@theme "~/dotfiles/.config/rofi/colorshemes/everforest-no-border.rasi"

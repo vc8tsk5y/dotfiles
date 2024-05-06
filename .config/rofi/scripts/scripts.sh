@@ -1,7 +1,7 @@
 #!/bin/sh
 
 scripts() {
-    options=" apps\n⏻ power\n󰅍 cliphist\n emoji\n󱢗 everforest\n󰄛 catppuccin mocha" selected=$(echo -e $options |rofi -dmenu -p "Scripts" -i)
+    options=" apps\n⏻ power\n󰅍 cliphist\n emoji\n everblush\n󱢗 everforest\n󰄛 catppuccin mocha" selected=$(echo -e $options |rofi -dmenu -p "Scripts" -i)
 
     if [[ $selected == " apps" ]]; then
         rofi -show drun
@@ -11,6 +11,8 @@ scripts() {
         cliphist list | rofi -dmenu | cliphist decode | wl-copy
     elif [[ $selected == " emoji" ]]; then
         rofimoji -a clipboard
+    elif [[ $selected == " everblush" ]]; then
+        /home/tim/dotfiles/.config/rofi/scripts/everblush.sh
     elif [[ $selected == "󱢗 everforest" ]]; then
         /home/tim/dotfiles/.config/rofi/scripts/everforest.sh
     elif [[ $selected == "󰄛 catppuccin mocha" ]]; then

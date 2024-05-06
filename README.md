@@ -134,12 +134,31 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 fi
 ```
 
+### qt theme
+needed qt6ct qt5ct also possible
+```bash
+mkdir ~/.config/qt6ct/colors &
+ln -sf ~/dotfiles/.config/qt6ct/colors/everblush.conf ~/.config/qt6ct/colors/
+```
+now open qt6ct and apply settings
+
 ### gtk theme
 
+everblush theme
+only seems to work for gtk 3
+
+```bash
+# install from https://github.com/Everblush or https://github.com/Everblush/gtk
+mkdir ~/.themes
+ln -sf /usr/share/themes/Everblush ~/.themes/
+# apply the theme
+ln -sf ~/dotfiles/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0
+```
+
+everforest theme
 install the theme
 
 ```bash
-# next 5 lines outdated cause i dont use everforest anymore
 paru everforest-gtk-theme-git
 
 ln -sf /usr/share/themes/Everforest-Dark-Borderless/gtk-4.0/assets ~/.config/gtk-4.0/
@@ -147,8 +166,7 @@ ln -sf /usr/share/themes/Everforest-Dark-Borderless/gtk-4.0/gtk.css ~/.config/gt
 ln -sf /usr/share/themes/Everforest-Dark-Borderless/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/
 
 # weiß nicht ob das auch also symlink funktioniert wenn nicht einfach "ln -sf" durch "cp -r" ersetzen aber sollte passen
-mkdir ~/.themes &
-ln -sf /usr/share/themes/Everblush ~/.themes/
+ln -sf /usr/share/themes/Everforest-Dark-Borderless ~/.themes/
 ```
 apply the themes in the gtk settings
 

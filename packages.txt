@@ -62,7 +62,7 @@ zathura
 pavucontroll maybe unstinstall
 
 # theme
-everforest-gtk-theme-git
+papirus
 
 # fonts
 tesseract-data-eng

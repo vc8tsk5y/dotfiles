@@ -1,0 +1,55 @@
+* {
+    background0: #141b1e;
+    background1: #232a2d;
+    red: #e57474;
+    green: #8ccf7e;
+    yellow: #e5c76b;
+    blue: #67b0e8;
+    magenta: #c47fd5;
+    cyan: #6cbfbf;
+    white0: #dadada;
+    white1: #b3b9b8;
+  border-radius: 2px;
+  background-color: @background0;
+  text-color: @white0;
+}
+
+window {
+  location: center;
+  width: 25%;
+  spacing: 0;
+  children: [ box ];
+}
+
+box {
+  padding: 8px;
+  spacing: 5px;
+  children: [ entry, listview ];
+}
+
+entry {
+  /* placeholder: "Search..."; */
+  placeholder-color: @white1;
+  padding: 8px;
+  expand: false;
+}
+
+element {
+  text-color: @white1;
+  padding: 8px;
+}
+element selected {
+  text-color: @green;
+}
+element-text, element-icon {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+listview {
+  lines: 10;    
+}
+
+listview, element, element selected, element-text, element-icon {
+  cursor: pointer;
+}

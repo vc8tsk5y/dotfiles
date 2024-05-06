@@ -2,7 +2,7 @@ configuration {
     display-drun: " apps";
     drun-display-format: "{name}";
     modi: "drun,";
-    font: "FiraCode Nerd Font 12";
+    font: "FiraCode Nerd Font 10";
 }
 
-@theme "~/dotfiles/.config/rofi/colorshemes/everforest-no-border.rasi"
+@theme "~/dotfiles/.config/rofi/colorshemes/everblush.rasi"

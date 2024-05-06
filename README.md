@@ -139,6 +139,7 @@ fi
 install the theme
 
 ```bash
+# next 5 lines outdated cause i dont use everforest anymore
 paru everforest-gtk-theme-git
 
 ln -sf /usr/share/themes/Everforest-Dark-Borderless/gtk-4.0/assets ~/.config/gtk-4.0/
@@ -146,7 +147,8 @@ ln -sf /usr/share/themes/Everforest-Dark-Borderless/gtk-4.0/gtk.css ~/.config/gt
 ln -sf /usr/share/themes/Everforest-Dark-Borderless/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/
 
 # weiß nicht ob das auch also symlink funktioniert wenn nicht einfach "ln -sf" durch "cp -r" ersetzen aber sollte passen
-ln -sf /usr/share/themes/Everforest-Dark-Borderless ~/.themes/
+mkdir ~/.themes &
+ln -sf /usr/share/themes/Everblush ~/.themes/
 ```
 apply the themes in the gtk settings
 

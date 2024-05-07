@@ -37,9 +37,14 @@ entry {
 element {
   text-color: @white1;
   padding: 8px;
+  orientation: horizontal;
+  children: [ element-icon, element-text];
+  spacing: 4px;
 }
 element selected {
+  text-decoration: underline;
   text-color: @green;
+  background-color: @background1;
 }
 element-text, element-icon {
   background-color: inherit;
@@ -47,9 +52,5 @@ element-text, element-icon {
 }
 
 listview {
-  lines: 10;    
-}
-
-listview, element, element selected, element-text, element-icon {
-  cursor: pointer;
+  lines: 12;
 }

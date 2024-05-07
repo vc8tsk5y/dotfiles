@@ -1,7 +1,7 @@
 #!/bin/sh
 
 everblush() {
-    options=("all" "Background0 #141b1e rgb(20, 27, 30)" "Background1 #232a2d rgb(35, 42, 45)" "Red #e57474 rgb(229, 116, 116)" "Green #8ccf7e rgb(140, 207, 126)" "Yellow #e5c76b rgb(229, 199, 107)" "Blue #67b0e8 rgb(103, 176, 232)" "Magenta #c47fd5 rgb(196, 127, 213)" "Cyan #6cbfbf rgb(108, 191, 191)" "White0 #dadada rgb(218, 218, 218)" "White1 #b3b9b8 rgb(179, 185, 184)")
+    options=("all" "background0-#141b1e" "background1-#232a2d" "background2-#32393c" "red-#e57474" "green-#8ccf7e" "yellow-#e5c76b" "blue-#67b0e8" "magenta-#c47fd5" "cyan-#6cbfbf" "white0-#dadada" "white1-#b3b9b8" "white2-#8e979a")
     declare -i i=0
     selected=$(
         while [ $i -lt ${#options[@]} ]
@@ -11,27 +11,31 @@ everblush() {
         done | rofi -dmenu -p " everblush" -i)
 
     if [[ $selected == "all" ]]; then
-        echo -en "Background0 #141b1e rgb(20, 27, 30)\nBackground1 #232a2d rgb(35, 42, 45)\nRed #e57474 rgb(229, 116, 116)\nGreen #8ccf7e rgb(140, 207, 126)\nYellow #e5c76b rgb(229, 199, 107)\nBlue #67b0e8 rgb(103, 176, 232)\nMagenta #c47fd5 rgb(196, 127, 213)\nCyan #6cbfbf rgb(108, 191, 191)\nWhite0 #dadada rgb(218, 218, 218)\nWhite1 #b3b9b8 rgb(179, 185, 184)" | wl-copy
-    elif [[ $selected == "Background0 #141b1e rgb(20, 27, 30)" ]]; then
+        echo -en "background0-#141b1e\nbackground1-#232a2d\nbackground2-#32393c\nred-#e57474\ngreen-#8ccf7e\nyellow-#e5c76b\nblue-#67b0e8\nmagenta-#c47fd5\ncyan-#6cbfbf\nwhite0-#dadada\nwhite1-#b3b9b8\nwhite2-#8e979a" | wl-copy
+    elif [[ $selected == "background0-#141b1e" ]]; then
         echo -n 141b1e | wl-copy
-    elif [[ $selected == "Background1 #232a2d rgb(35, 42, 45)" ]]; then
+    elif [[ $selected == "background1-#232a2d" ]]; then
         echo -n 232a2d | wl-copy
-    elif [[ $selected == "Red #e57474 rgb(229, 116, 116)" ]]; then
+    elif [[ $selected == "background2-#32393c" ]]; then
+        echo -n 32393c | wl-copy
+    elif [[ $selected == "red-#e57474" ]]; then
         echo -n e57474 | wl-copy
-    elif [[ $selected == "Green #8ccf7e rgb(140, 207, 126)" ]]; then
+    elif [[ $selected == "green-#8ccf7e" ]]; then
         echo -n 8ccf7e | wl-copy
-    elif [[ $selected == "Yellow #e5c76b rgb(229, 199, 107)" ]]; then
+    elif [[ $selected == "yellow-#e5c76b" ]]; then
         echo -n e5c76b | wl-copy
-    elif [[ $selected == "Blue #67b0e8 rgb(103, 176, 232)" ]]; then
+    elif [[ $selected == "blue-#67b0e8" ]]; then
         echo -n 67b0e8 | wl-copy
-    elif [[ $selected == "Magenta #c47fd5 rgb(196, 127, 213)" ]]; then
+    elif [[ $selected == "magenta-#c47fd5" ]]; then
         echo -n c47fd5 | wl-copy
-    elif [[ $selected == "Cyan #6cbfbf rgb(108, 191, 191)" ]]; then
+    elif [[ $selected == "cyan-#6cbfbf" ]]; then
         echo -n 6cbfbf | wl-copy
-    elif [[ $selected == "White0 #dadada rgb(218, 218, 218)" ]]; then
+    elif [[ $selected == "white0-#dadada" ]]; then
         echo -n dadada | wl-copy
-    elif [[ $selected == "White1 #b3b9b8 rgb(179, 185, 184)" ]]; then
+    elif [[ $selected == "white1-#b3b9b8" ]]; then
         echo -n b3b9b8 | wl-copy
+    elif [[ $selected == "white2-#8e979a" ]]; then
+        echo -n 8e979a | wl-copy
     else
         echo "canceled"
     fi

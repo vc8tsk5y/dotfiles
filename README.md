@@ -28,10 +28,10 @@ mkdir -p ~/.config/fastfetch &
 ln -sf ~/dotfiles/.config/fastfetch/config.jsonc ~/.config/fastfetch/
 ```
 
-### hyprland
+### hyprland & hyprpaper
 ```bash
 mkdir -p ~/.config/hypr &
-ln -sf ~/dotfiles/.config/hypr/hyprland.conf ~/.config/hypr/
+ln -sf ~/dotfiles/.config/hypr/*.conf ~/.config/hypr/
 ```
 
 ### waybar
@@ -55,8 +55,9 @@ ln -sf ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/
 
 ### kitty
 ```bash
-mkdir -p ~/.config/kitty &
-ln -sf ~/dotfiles/.config/kitty/* ~/.config/kitty/
+mkdir -p ~/.config/kitty/themes &
+ln -sf ~/dotfiles/.config/kitty/* ~/.config/kitty/ &
+ln -sf ~/dotfiles/.config/kitty/themes/* ~/.config/kitty/themes/
 ```
 
 ### rofi
@@ -145,15 +146,16 @@ now open qt6ct and apply settings
 ### gtk theme
 
 everblush theme
+I dont know if i need to do this sep now that i apply my themes with nwg-look
 only seems to work for gtk 3
 
 ```bash
 # install from https://github.com/Everblush or https://github.com/Everblush/gtk
 mkdir ~/.themes
 ln -sf /usr/share/themes/Everblush ~/.themes/
-# apply the theme
-ln -sf ~/dotfiles/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0
 ```
+apply the theme with nwg-look
+or apply the theme in ~/.config/gtk-3.0/settings.ini
 
 everforest theme
 install the theme

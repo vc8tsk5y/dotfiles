@@ -3,6 +3,7 @@ paru     # manual install
 git
 neovim
 openssh
+fastfetch
 fzf
 lsd
 man-db
@@ -14,12 +15,11 @@ zsh
   zsh-autocomplete
   zsh-autopair-git
   zsh-autosuggestions
-  zsh-history-substring-search
   zsh-syntax-highlighting
-  zsh-vi-mode
+  fzf-tab-git
   starship
-  difftastic
-  firewalld
+difftastic
+firewalld
 
 # laptop specific
 tlp
@@ -27,14 +27,16 @@ tlp
   ethtool
   smartmontools
 
-hyprland-git
-  hyprcursor-git
+hyprland
+  hyprcursor
+  hyprpaper
+  hypridle
+  hyprlock
   grimshot
   swaync
   xdg-desktop-portal-hyprland
   polkit-kde-agent
   qt5-wayland qt6-wayland
-    qt6ct
   waybar
   cliphist
   rofi-lbonn-wayland-git
@@ -46,23 +48,25 @@ dbus-python # needed for the ecampus thm script to make wifi work at thm
 jdk-openjdk
 R-studio
 
-# gui
-thunderbird
+# tools
+kitty
+pulsemixer
 imv
 firefox
 vesktop
-kitty
+thunderbird
+gimp
+mpv
 pcmanfm-gtk3
 flatpak
-mpv
 ytdlp-gui
 zathura
   zathura-pdf-mupdf
 
-pavucontroll maybe unstinstall
-
 # theme
 papirus
+qt6ct
+nwg-look
 
 # fonts
 tesseract-data-eng

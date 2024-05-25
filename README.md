@@ -28,7 +28,7 @@ mkdir -p ~/.config/fastfetch &
 ln -sf ~/dotfiles/.config/fastfetch/config.jsonc ~/.config/fastfetch/
 ```
 
-### hyprland & hyprpaper
+### hyprland & hyprpaper hypridle hyprlock
 ```bash
 mkdir -p ~/.config/hypr &
 ln -sf ~/dotfiles/.config/hypr/*.conf ~/.config/hypr/
@@ -39,6 +39,12 @@ ln -sf ~/dotfiles/.config/hypr/*.conf ~/.config/hypr/
 mkdir -p ~/.config/waybar &
 ln -sf ~/dotfiles/.config/waybar/config.jsonc ~/.config/waybar/
 ln -sf ~/dotfiles/.config/waybar/style.css ~/.config/waybar/
+```
+
+### swaync (notification daemon and center)
+```bash
+mkdir -p ~/.config/swaync &
+ln -sf ~/dotfiles/.config/swaync/* ~/.config/swaync/
 ```
 
 ### qtile
@@ -177,7 +183,7 @@ ln -sf ~/dotfiles/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0
 ```
 
 ### mic settings
-
+everything can be managed instide of pulsemixer (goat)
 set default audio device
 ```bash
 pactl list sources short

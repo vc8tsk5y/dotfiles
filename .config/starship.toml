@@ -5,20 +5,38 @@ $character
 right_format = """
 """
 
+scan_timeout = 10
+
+palette = 'everblush'
+[palettes.everblush]
+
+background0 = '#141b1e'
+background1 = '#232a2d'
+background2 = '#2d3437'
+red = '#e57474'
+green = '#8ccf7e'
+yellow = '#e5c76b'
+blue = '#67b0e8'
+magenta = '#c47fd5'
+cyan = '#6cbfbf'
+white0 = '#dadada'
+white1 = '#b3b9b8'
+white2 = '#8e979a'
+
 [fill]
 symbol = '-'
 style = 'green'
 
 [character]
-success_symbol = '[➜ ](black)'
-error_symbol = '[➜ ](black)'
+success_symbol = '[➜ ](background2)'
+error_symbol = '[➜ ](background2)'
 vimcmd_symbol = '[ ](green)'
 vimcmd_replace_one_symbol = '[R](yellow)'
 vimcmd_replace_symbol = '[R](yellow)'
 vimcmd_visual_symbol = '[V](yellow)'
 
 [username]
-style_user = 'black'
+style_user = 'background2'
 style_root = 'red'
 format = '[$user]($style)'
 disabled = false
@@ -27,7 +45,7 @@ show_always = true
 [hostname]
 ssh_only = false
 format = '[@](green)[$hostname]($style) '
-style = 'black'
+style = 'background2'
 trim_at = '.'
 disabled = false
 
@@ -43,31 +61,31 @@ min_time = 0
 show_milliseconds = true
 disabled = false
 format = '[$duration]($style) '
-style = 'black'
+style = 'background2'
 show_notifications = false
 min_time_to_notify = 10_000
 
 [time]
 disabled = false
 format = '[$time]($style)'
-style = 'black'
+style = 'background2'
 time_format = '%T'
 use_12hr = false
 
 [git_branch]
 disabled = false
-format = '[|](green)[$symbol$branch(:$remote_branch)](black)'
+format = '[|](green)[$symbol$branch(:$remote_branch)](background2)'
 
 [git_status]
 disabled = false
 ignore_submodules = false
-format = '( [\[$all_status$ahead_behind\]](black))'
+format = '( [\[$all_status$ahead_behind\]](background2))'
 
 [git_metrics]
 disabled = false
 only_nonzero_diffs = true
 ignore_submodules = false
-format = '([ +$added](black))([ -$deleted](black))[|](green)'
+format = '([ +$added](background2))([ -$deleted](background2))[|](green)'
 
 [sudo]
 disabled = false

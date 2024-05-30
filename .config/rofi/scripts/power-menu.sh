@@ -10,9 +10,9 @@ powermenu() {
     elif [[ $selected == "Suspend" ]]; then
         systemctl suspend
     elif [[ $selected == "Lock" ]]; then
-        betterlockscreen -l
+        loginctl lock-session
     elif [[ $selected == "Log out" ]]; then
-        qtile cmd-obj -o cmd -f shutdown
+        hyprctl dispatch exit
     else
         echo "canceled"
     fi

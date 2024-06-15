@@ -1,7 +1,5 @@
 # dotfiles
 
-## symlinks
-
 ### reflector
 ```bash
 sudo cp ~/dotfiles/root/reflector.conf /etc/xdg/reflector/
@@ -47,18 +45,6 @@ mkdir -p ~/.config/swaync &
 ln -sf ~/dotfiles/.config/swaync/* ~/.config/swaync/
 ```
 
-### qtile
-```bash
-mkdir -p ~/.config/qtile &
-ln -sf ~/dotfiles/.config/qtile/*.py ~/.config/qtile/
-```
-
-### dunst
-```bash
-mkdir -p ~/.config/dunst &
-ln -sf ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/
-```
-
 ### kitty
 ```bash
 mkdir -p ~/.config/kitty/themes &
@@ -72,30 +58,42 @@ mkdir -p ~/.config/rofi
 ln -sf ~/dotfiles/.config/rofi/*.rasi ~/.config/rofi/
 ```
 
-### picom
+### qtile (only Xorg)
+```bash
+mkdir -p ~/.config/qtile &
+ln -sf ~/dotfiles/.config/qtile/*.py ~/.config/qtile/
+```
+
+### dunst (only Xorg)
+```bash
+mkdir -p ~/.config/dunst &
+ln -sf ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/
+```
+
+### picom (only Xorg)
 ```bash
 mkdir -p ~/.config/picom &
 ln -sf ~/dotfiles/.config/picom/picom.conf ~/.config/picom/
 ```
 
-### betterlockscreen
+### betterlockscreen (only Xorg)
 ```bash
 mkdir -p ~/.config/betterlockscreen &
 ln -sf ~/dotfiles/.config/betterlockscreen/betterlockscreenrc ~/.config/betterlockscreen/ &
 betterlockscreen -u ~/.config/wallpaper/reine-lofoten.jpg # can be swapped for some other wallpaper
 ```
 
-### .xinitrc
+### .xinitrc (only Xorg)
 ```bash
 ln -sf ~/dotfiles/.xinitrc-desktop ~/.xinitrc
 ```
 
-### .Xresources
+### .Xresources (only Xorg)
 ```bash
 ln -sf ~/dotfiles/.Xresources ~/
 ```
 
-### keyboardlayout
+### keyboardlayout (only Xorg)
 ```bash
 sudo ln -sf ~/dotfiles/root/00-keyboard.conf-desktop /etc/X11/xorg.conf.d/00-keyboard.conf
 ```
@@ -119,14 +117,15 @@ ln -sf ~/dotfiles/.config/mimeapps.list ~/.config/
 ln -sf ~/dotfiles/.config/mimeapps.list ~/.local/share/applications/
 ```
 
-### grub
+### grub (useless use systemd's thing for secureboot instead)
 
 zwei coole optionen einmal mc world selection und mc main menu
 
 [minegrub world sel theme](https://github.com/Lxtharia/minegrub-world-sel-theme)
 [minegrubtheme](https://github.com/Lxtharia/minegrub-theme)
 
- \+ change this line in /etc/default/grub to show other os in grub
+change this line in /etc/default/grub to show other os in grub
+
 ```bash
 GRUB_DISABLE_OS_PROBER=false
 ```
@@ -142,6 +141,7 @@ fi
 ```
 
 ### qt theme
+
 needed qt6ct qt5ct also possible
 ```bash
 mkdir ~/.config/qt6ct/colors &
@@ -149,39 +149,9 @@ ln -sf ~/dotfiles/.config/qt6ct/colors/everblush.conf ~/.config/qt6ct/colors/
 ```
 now open qt6ct and apply settings
 
-### gtk theme
 
-everblush theme
-I dont know if i need to do this sep now that i apply my themes with nwg-look
-only seems to work for gtk 3
+### mic settings (useless)
 
-```bash
-# install from https://github.com/Everblush or https://github.com/Everblush/gtk
-mkdir ~/.themes
-ln -sf /usr/share/themes/Everblush ~/.themes/
-```
-apply the theme with nwg-look
-
-everforest theme
-install the theme
-
-```bash
-paru everforest-gtk-theme-git
-
-ln -sf /usr/share/themes/Everforest-Dark-Borderless/gtk-4.0/assets ~/.config/gtk-4.0/
-ln -sf /usr/share/themes/Everforest-Dark-Borderless/gtk-4.0/gtk.css ~/.config/gtk-4.0/
-ln -sf /usr/share/themes/Everforest-Dark-Borderless/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/
-
-# weiß nicht ob das auch also symlink funktioniert wenn nicht einfach "ln -sf" durch "cp -r" ersetzen aber sollte passen
-ln -sf /usr/share/themes/Everforest-Dark-Borderless ~/.themes/
-```
-apply the themes in the gtk settings
-
-```bash
-ln -sf ~/dotfiles/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0
-```
-
-### mic settings
 everything can be managed instide of pulsemixer (goat)
 set default audio device
 ```bash

@@ -58,6 +58,7 @@ R-studio
 # tools
 kitty
 pulsemixer
+easyeffects
 imv
 firefox
 vesktop
@@ -67,13 +68,15 @@ mpv
 pcmanfm-gtk3
 flatpak
 ytdlp-gui
+wev # get key names
 zathura
   zathura-pdf-mupdf
 
 # theme
-papirus
 qt6ct
 nwg-look
+  everforest-gtk-theme-git
+papirus
 
 # fonts
 tesseract-data-eng

@@ -161,7 +161,6 @@ mkdir ~/.themes
 ln -sf /usr/share/themes/Everblush ~/.themes/
 ```
 apply the theme with nwg-look
-or apply the theme in ~/.config/gtk-3.0/settings.ini
 
 everforest theme
 install the theme

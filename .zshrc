@@ -39,7 +39,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # shell integrations
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
-
+eval "$(zoxide init --cmd cd zsh)"
 
 # fzf-tab config
 zstyle ':completion:*:descriptions' format '[%d]'
@@ -63,6 +63,9 @@ alias lsd='lsd -lhA --group-dirs first --header'
 # Custom aliases
 alias thm='~/dotfiles/scripts/thm-vpn.sh'
 alias kssh='kitty +kitten ssh'
+# launch term in same dir
+alias f='kitty -d $(pwd) & disown'
+# alias asd='kitty +open $(pwd) & disown' # same functionality like above
 
 # Defaults
 export EDITOR="nvim"

@@ -2,10 +2,13 @@ paru     # manual install
 
 git
 neovim
+  unzip
+  ripgrep
+  fd
 openssh
 fastfetch
-fzf
 lsd
+fzf
 man-db
 tldr
 trash-cli
@@ -18,6 +21,7 @@ zsh
   zsh-syntax-highlighting
   fzf-tab-git
   starship
+  zoxide
 difftastic
 firewalld
 
@@ -26,6 +30,8 @@ tlp
   tlp-rdw
   ethtool
   smartmontools
+libva-intel-driver
+libva-utils
 
 hyprland
   hyprcursor
@@ -46,6 +52,7 @@ hyprland
 dbus-python # needed for the ecampus thm script to make wifi work at thm
 
 jdk-openjdk
+  maven
 R-studio
 
 # tools

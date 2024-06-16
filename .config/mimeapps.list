@@ -1,8 +1,8 @@
 [Default Applications]
 
-image/png=feh.desktop
-image/jpg=feh.desktop
-image/jpeg=feh.desktop
+image/png=imv.desktop
+image/jpg=imv.desktop
+image/jpeg=imv.desktop
 
 inode/directory=pcmanfm.desktop
 

@@ -5,4 +5,4 @@ configuration {
     font: "FiraCode Nerd Font 10";
 }
 
-@theme "~/dotfiles/.config/rofi/colorshemes/everblush.rasi"
+@theme "~/dotfiles/.config/rofi/colorshemes/gruvbox-material-hard.rasi"

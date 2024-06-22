@@ -111,6 +111,15 @@ fi
 ```
 
 
+### gtk theme
+[github](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) with install instructions (aur package is trash)
+for install script use this command
+```bash
+mkdir ~/.themes &
+./install.sh -l -t all
+```
+
+
 ### qt theme
 
 needed qt6ct qt5ct also possible

@@ -6,7 +6,7 @@ everforest() {
     selected=$(
         while [ $i -lt ${#options[@]} ]
         do
-            echo -en "${options[$i]}\x00icon\x1f~/dotfiles/.config/rofi/scripts/everforest/${options[$i]}.png\n"
+            echo -en "${options[$i]}\x00icon\x1f~/dotfiles/scripts/rofi/everforest/${options[$i]}.png\n"
             i=$(( $i + 1 ))
         done | rofi -dmenu -p "󱢗 everforest" -i)
 

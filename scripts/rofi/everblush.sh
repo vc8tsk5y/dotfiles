@@ -6,7 +6,7 @@ everblush() {
     selected=$(
         while [ $i -lt ${#options[@]} ]
         do
-            echo -en "${options[$i]}\x00icon\x1f~/dotfiles/.config/rofi/scripts/everblush/${options[$i]}.png\n"
+            echo -en "${options[$i]}\x00icon\x1f~/dotfiles/scripts/rofi/everblush/${options[$i]}.png\n"
             i=$(( $i + 1 ))
         done | rofi -dmenu -p " everblush" -i)
 

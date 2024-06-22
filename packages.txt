@@ -76,6 +76,7 @@ zathura
 qt6ct
 nwg-look
   everforest-gtk-theme-git
+  graphite-gtk-theme-black-rimless-git
 papirus
 
 # fonts

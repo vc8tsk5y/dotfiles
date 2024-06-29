@@ -37,6 +37,13 @@ ln -sf ~/dotfiles/.config/hypr/*.conf ~/.config/hypr/
 ```
 
 
+### rofi
+```bash
+mkdir -p ~/.config/rofi
+ln -sf ~/dotfiles/.config/rofi/*.rasi ~/.config/rofi/
+```
+
+
 ### waybar
 ```bash
 mkdir -p ~/.config/waybar &
@@ -57,13 +64,6 @@ ln -sf ~/dotfiles/.config/swaync/* ~/.config/swaync/
 mkdir -p ~/.config/kitty/themes &
 ln -sf ~/dotfiles/.config/kitty/* ~/.config/kitty/ &
 ln -sf ~/dotfiles/.config/kitty/themes/* ~/.config/kitty/themes/
-```
-
-
-### rofi
-```bash
-mkdir -p ~/.config/rofi
-ln -sf ~/dotfiles/.config/rofi/*.rasi ~/.config/rofi/
 ```
 
 
@@ -125,7 +125,7 @@ mkdir ~/.themes &
 needed qt6ct qt5ct also possible
 ```bash
 mkdir ~/.config/qt6ct/colors &
-ln -sf ~/dotfiles/.config/qt6ct/colors/everblush.conf ~/.config/qt6ct/colors/
+ln -sf ~/dotfiles/.config/qt6ct/colors/*.conf ~/.config/qt6ct/colors/
 ```
 now open qt6ct and apply settings
 
@@ -146,4 +146,11 @@ paru -Sccd
 flatpak update 
 # nvim 
 Lazy
+```
+
+### compile with all threads
+/etc/makepkg.conf
+search MAKEFLAGS & set to:
+```
+MAKEFLAGS="-j$(nproc)"
 ```

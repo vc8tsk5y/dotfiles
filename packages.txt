@@ -57,6 +57,7 @@ R-studio
 
 # tools
 kitty
+foot
 pulsemixer
 easyeffects
 imv
@@ -71,6 +72,7 @@ ytdlp-gui
 wev # get key names
 zathura
   zathura-pdf-mupdf
+kdeconnect
 
 # theme
 qt6ct
@@ -80,9 +82,10 @@ nwg-look
 papirus
 
 # fonts
+otf-monaspace-nerd
+ttf-firacode-nerd
 tesseract-data-eng
 tesseract-data-deu
-ttf-firacode-nerd
 ttf-twemoji
 noto-fonts
 noto-fonts-emoji

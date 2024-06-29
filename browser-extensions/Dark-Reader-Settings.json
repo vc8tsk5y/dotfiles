@@ -1,5 +1,5 @@
 {
-    "schemeVersion": 0,
+    "schemeVersion": 2,
     "enabled": true,
     "fetchNews": true,
     "theme": {
@@ -9,16 +9,16 @@
         "grayscale": 0,
         "sepia": 0,
         "useFont": false,
-        "fontFamily": "Open Sans",
+        "fontFamily": "Segoe UI",
         "textStroke": 0,
         "engine": "dynamicTheme",
         "stylesheet": "",
-        "darkSchemeBackgroundColor": "#2d353b",
-        "darkSchemeTextColor": "#d3c6aa",
+        "darkSchemeBackgroundColor": "#1d2021",
+        "darkSchemeTextColor": "#d4be98",
         "lightSchemeBackgroundColor": "#dcdad7",
         "lightSchemeTextColor": "#181a1b",
-        "scrollbarColor": "#d3c6aa",
-        "selectionColor": "#a7c080",
+        "scrollbarColor": "#d4be98",
+        "selectionColor": "#7daea3",
         "styleSystemControls": false,
         "lightColorScheme": "Default",
         "darkColorScheme": "Default",
@@ -26,18 +26,8 @@
     },
     "presets": [],
     "customThemes": [],
-    "enabledByDefault": false,
-    "enabledFor": [
-        "de.wikipedia.org",
-        "contacts.google.com",
-        "denkspuren.blogspot.com",
-        "bard.google.com",
-        "moodle.thm.de",
-        "calendar.google.com",
-        "epomaker.de",
-        "docs.qtile.org",
-        "wiki.archlinux.org"
-    ],
+    "enabledByDefault": true,
+    "enabledFor": [],
     "disabledFor": [],
     "changeBrowserTheme": false,
     "syncSettings": true,
@@ -61,9 +51,11 @@
     "enableContextMenus": false,
     "detectDarkTheme": false,
     "displayedNews": [
-        "news-2023"
+        "news-2023",
+        "thanks-2023"
     ],
     "readNews": [
-        "news-2023"
+        "news-2023",
+        "thanks-2023"
     ]
 }

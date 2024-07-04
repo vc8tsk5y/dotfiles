@@ -5,6 +5,8 @@ neovim
   unzip
   ripgrep
   fd
+smartmontools
+less
 openssh
 fastfetch
 lsd
@@ -24,12 +26,13 @@ zsh
   zoxide
 difftastic
 firewalld
+openconnect
+bat
 
 # laptop specific
 tlp
   tlp-rdw
   ethtool
-  smartmontools
 libva-intel-driver
 libva-utils
 
@@ -68,6 +71,7 @@ gimp
 mpv
 pcmanfm-gtk3
 flatpak
+docker
 ytdlp-gui
 wev # get key names
 zathura

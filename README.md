@@ -30,10 +30,10 @@ ln -sf ~/dotfiles/.config/fastfetch/config.jsonc ~/.config/fastfetch/
 ```
 
 
-### hyprland & hyprpaper hypridle hyprlock
+### hyprland, autostart, hyprpaper, hypridle, hyprlock
 ```bash
 mkdir -p ~/.config/hypr &
-ln -sf ~/dotfiles/.config/hypr/*.conf ~/.config/hypr/
+ln -sf ~/dotfiles/.config/hypr/* ~/.config/hypr/
 ```
 
 

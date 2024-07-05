@@ -59,6 +59,13 @@ ln -sf ~/dotfiles/.config/swaync/* ~/.config/swaync/
 ```
 
 
+### foot
+```bash
+mkdir -p ~/.config/foot &
+ln -sf ~/dotfiles/.config/foot/* ~/.config/foot/
+```
+
+
 ### kitty
 ```bash
 mkdir -p ~/.config/kitty/themes &

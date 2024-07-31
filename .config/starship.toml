@@ -1,5 +1,5 @@
 format = '''
-$fill$git_branch$git_status$git_metrics
+$fill$git_branch$git_status$git_metrics$fill
 $sudo$character
 '''
 
@@ -60,18 +60,18 @@ use_12hr = false
 
 [git_branch]
 disabled = false
-format = '[$symbol$branch(:$remote_branch)](white)'
+format = '[$symbol$branch($remote_branch)](underline green)'
 
 [git_status]
 disabled = false
 ignore_submodules = false
-format = '( [\[$all_status$ahead_behind\]](white))'
+format = '([ \[$all_status$ahead_behind\]](underline green))'
 
 [git_metrics]
 disabled = false
 only_nonzero_diffs = true
 ignore_submodules = false
-format = '([ +$added](white))([ -$deleted](white))'
+format = '([ +$added](underline green))([ -$deleted](underline green))'
 
 [sudo]
 disabled = false

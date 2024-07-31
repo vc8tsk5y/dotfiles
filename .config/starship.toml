@@ -1,20 +1,21 @@
 format = '''
-$fill$git_branch$git_status$git_metrics$fill$sudo$username$hostname$directory
-$character
+$fill$git_branch$git_status$git_metrics
+$sudo$character
 '''
-right_format = """
-"""
 
+right_format = """
+$directory $username[@](green)$hostname
+"""
 scan_timeout = 10
 
 [fill]
-symbol = '-'
-style = 'green'
+symbol = ' '
+style = 'underline green'
 
 [character]
-success_symbol = '[➜ ](white)'
-error_symbol = '[➜ ](white)'
-vimcmd_symbol = '[ ](green)'
+success_symbol = '[➜](white)'
+error_symbol = '[➜](white)'
+vimcmd_symbol = '[](green)'
 vimcmd_replace_one_symbol = '[R](yellow)'
 vimcmd_replace_symbol = '[R](yellow)'
 vimcmd_visual_symbol = '[V](yellow)'
@@ -28,15 +29,16 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = '[@](green)[$hostname]($style) '
+format = '[$hostname]($style)'
 style = 'white'
 trim_at = '.'
 disabled = false
 
 [directory]
+format = '[$read_only]($read_only_style) [$path]($style)'
 truncation_length = 8
 truncate_to_repo = true
-read_only = ' '
+read_only = ''
 read_only_style = 'red'
 style = 'green'
 
@@ -44,7 +46,7 @@ style = 'green'
 min_time = 0
 show_milliseconds = true
 disabled = false
-format = '[$duration]($style) '
+format = '[$duration]($style)'
 style = 'white'
 show_notifications = false
 min_time_to_notify = 10_000
@@ -58,7 +60,7 @@ use_12hr = false
 
 [git_branch]
 disabled = false
-format = '[|](green)[$symbol$branch(:$remote_branch)](white)'
+format = '[$symbol$branch(:$remote_branch)](white)'
 
 [git_status]
 disabled = false
@@ -69,12 +71,13 @@ format = '( [\[$all_status$ahead_behind\]](white))'
 disabled = false
 only_nonzero_diffs = true
 ignore_submodules = false
-format = '([ +$added](white))([ -$deleted](white))[|](green)'
+format = '([ +$added](white))([ -$deleted](white))'
 
 [sudo]
 disabled = false
 format = '[$symbol]($style)'
-symbol = '[|](green)'
+symbol = '|'
+style = 'green'
 
 [git_commit]
 disabled = true

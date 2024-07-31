@@ -86,6 +86,8 @@ nwg-look
 papirus
 
 # fonts
+otf-geist-mono-nerd
+otf-geist
 otf-monaspace-nerd
 ttf-firacode-nerd
 tesseract-data-eng

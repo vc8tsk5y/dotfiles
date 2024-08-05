@@ -1,5 +1,12 @@
 # dotfiles
 
+### DNS
+in nmtui edit conneciton
+IPv4 configuration show
+DNS servers 1.1.1.1 and 1.0.0.1
+enable Ignore automaticall obtained DNS parameters
+
+
 ### reflector
 ```bash
 sudo cp ~/dotfiles/root/reflector.conf /etc/xdg/reflector/

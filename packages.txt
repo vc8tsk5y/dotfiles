@@ -86,10 +86,10 @@ nwg-look
 papirus
 
 # fonts
+ttf-firacode-nerd
 otf-geist-mono-nerd
 otf-geist
-otf-monaspace-nerd
-ttf-firacode-nerd
+otf-monocraft
 tesseract-data-eng
 tesseract-data-deu
 ttf-twemoji

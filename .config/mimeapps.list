@@ -6,7 +6,7 @@ image/jpeg=imv.desktop
 
 inode/directory=pcmanfm.desktop
 
-application/pdf=firefox.desktop
+application/pdf=org.pwmt.zathura.desktop
 
 text/html=firefox.desktop
 x-scheme-handler/about=firefox.desktop

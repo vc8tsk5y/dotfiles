@@ -44,6 +44,7 @@ hyprland
   grimshot
   swaync
   xdg-desktop-portal-hyprland
+  xdg-desktop-portal-gtk # for the file picker
   polkit-kde-agent
   qt5-wayland qt6-wayland
   waybar
@@ -64,6 +65,7 @@ foot
 pulsemixer
 easyeffects
 imv
+yt-dlp
 firefox
 vesktop
 thunderbird
@@ -72,7 +74,6 @@ mpv
 pcmanfm-gtk3
 flatpak
 docker
-ytdlp-gui
 wev # get key names
 zathura
   zathura-pdf-mupdf

@@ -88,9 +88,8 @@ papirus
 
 # fonts
 ttf-firacode-nerd
-otf-geist-mono-nerd
-otf-geist
 otf-monocraft
+
 tesseract-data-eng
 tesseract-data-deu
 ttf-twemoji

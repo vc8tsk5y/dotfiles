@@ -14,7 +14,7 @@
 * {
     /* important to reset all setings set by gtk theme */
     all: initial;
-    font-family: FiraCode Nerd Font;
+    font-family: Monocraft;
     font-size: 16px;
     color: @white0;
 }

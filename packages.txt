@@ -1,10 +1,10 @@
 paru     # manual install
 
 git
-neovim
-  unzip
-  ripgrep
-  fd
+    neovim
+    unzip
+    ripgrep
+    fd
 smartmontools
 less
 openssh
@@ -17,13 +17,13 @@ trash-cli
 cronie
 reflector
 zsh
-  zsh-autocomplete
-  zsh-autopair-git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  fzf-tab-git
-  starship
-  zoxide
+    zsh-autocomplete
+    zsh-autopair-git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    fzf-tab-git
+    starship
+    zoxide
 difftastic
 firewalld
 openconnect
@@ -31,32 +31,37 @@ bat
 
 # laptop specific
 tlp
-  tlp-rdw
-  ethtool
+    tlp-rdw
+    ethtool
 libva-intel-driver
 libva-utils
 
 hyprland
-  hyprcursor
-  hyprpaper
-  hypridle
-  hyprlock
-  grimshot
-  swaync
-  xdg-desktop-portal-hyprland
-  xdg-desktop-portal-gtk # for the file picker
-  polkit-kde-agent
-  qt5-wayland qt6-wayland
-  waybar
-  cliphist
-  rofi-lbonn-wayland-git
+    aquamairne
+    hyprlang
+    hyprcursor
+    hyprutils
+    hyprpaper
+    hypridle
+    hyprlock
+    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk # for the file picker
+    qt5-wayland qt6-wayland
+
+#Desktop environment
+grimshot
+polkit-kde-agent
+cliphist
+rofi-lbonn-wayland-git
     rofimoji
+waybar
+swaync
 
 # interesting fixes
 dbus-python # needed for the ecampus thm script to make wifi work at thm
 
 jdk-openjdk
-  maven
+    maven
 R-studio
 
 # tools
@@ -76,14 +81,14 @@ flatpak
 docker
 wev # get key names
 zathura
-  zathura-pdf-mupdf
+    zathura-pdf-mupdf
 kdeconnect
 
 # theme
 qt6ct
 nwg-look
-  everforest-gtk-theme-git
-  graphite-gtk-theme-black-rimless-git
+    everforest-gtk-theme-git
+    graphite-gtk-theme-black-rimless-git
 papirus
 
 # fonts

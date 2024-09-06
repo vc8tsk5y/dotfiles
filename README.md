@@ -3,7 +3,7 @@
 ### DNS
 in nmtui edit conneciton
 IPv4 configuration show
-DNS servers 1.1.1.1 and 1.0.0.1
+DNS servers 194.242.2.3
 enable Ignore automaticall obtained DNS parameters
 
 

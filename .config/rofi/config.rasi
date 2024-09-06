@@ -2,7 +2,7 @@ configuration {
     display-drun: " apps";
     drun-display-format: "{name}";
     modi: "drun,";
-    font: "Monocraft 12";
+    font: "FiraCode Nerd Font 12";
 }
 
 @theme "~/dotfiles/.config/rofi/colorshemes/gruvbox-material-hard.rasi"

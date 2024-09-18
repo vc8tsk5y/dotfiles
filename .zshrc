@@ -3,7 +3,7 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
-export HISTORY_IGNORE="(ls*|cd*|pwd*|exit|lsd*)"
+export HISTORY_IGNORE="(ls*|cd*|pwd*|exit|ls*)"
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
@@ -17,9 +17,6 @@ export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.local/bin"
 
 unsetopt beep
-
-# vim mode
-bindkey -v
 
 # Enable command auto-completion
 autoload -Uz compinit
@@ -36,6 +33,8 @@ source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 # shell integrations
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
@@ -50,15 +49,13 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # completions show hidden files
 setopt globdots
 
-
-
 # Aliases
 # General aliases
 alias grep='grep -i --color=auto'
 alias mv='mv -i'
 alias cp='cp -i'
-alias vim='nvim'
-alias lsd='lsd -lhA --group-dirs first --header'
+alias vi='nvim'
+alias ls='lsd -lhA --group-dirs first --header'
 
 # Custom aliases
 alias thm='~/dotfiles/scripts/thm-vpn.sh'

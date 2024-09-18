@@ -8,6 +8,7 @@ git
 smartmontools
 less
 openssh
+tmux
 fastfetch
 lsd
 fzf
@@ -21,6 +22,7 @@ zsh
     zsh-autopair-git
     zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-vi-mode
     fzf-tab-git
     starship
     zoxide

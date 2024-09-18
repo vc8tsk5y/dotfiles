@@ -1,11 +1,5 @@
 # dotfiles
 
-### DNS
-in nmtui edit conneciton
-IPv4 configuration show
-DNS servers 194.242.2.3
-enable Ignore automaticall obtained DNS parameters
-
 
 ### reflector
 ```bash
@@ -51,7 +45,7 @@ ln -sf ~/dotfiles/.config/rofi/*.rasi ~/.config/rofi/
 ```
 
 
-### waybar
+### ~~waybar~~
 ```bash
 mkdir -p ~/.config/waybar &
 ln -sf ~/dotfiles/.config/waybar/config.jsonc ~/.config/waybar/
@@ -59,14 +53,14 @@ ln -sf ~/dotfiles/.config/waybar/style.css ~/.config/waybar/
 ```
 
 
-### swaync (notification daemon and center)
+### ~~swaync~~ (notification daemon and center)
 ```bash
 mkdir -p ~/.config/swaync &
 ln -sf ~/dotfiles/.config/swaync/* ~/.config/swaync/
 ```
 
 
-### foot
+### ~~foot~~
 ```bash
 mkdir -p ~/.config/foot &
 ln -sf ~/dotfiles/.config/foot/* ~/.config/foot/
@@ -82,7 +76,7 @@ ln -sf ~/dotfiles/.config/kitty/themes/* ~/.config/kitty/themes/
 
 
 ### Battery optimisation with TLP
-[Youtube video explains!](https://www.youtube.com/watch?v=GDdGK8Z_qzs)
+[Youtube video explains!](https://www.youtube.com/watch?v=GDdGK8Z_qzs)\
 [das auch sehr wichtig](https://wiki.archlinux.org/title/TLP)
 
 ```bash
@@ -91,8 +85,6 @@ sudo tlp start
 ```
 important: follow suggestings from error messages
 
-
-## some other shit
 
 ### mimetypes
 
@@ -104,7 +96,6 @@ ln -sf ~/dotfiles/.config/mimeapps.list ~/.local/share/applications/
 
 ### crontab for trash
 
-cronie
 ```bash
 crontab -e
 ```
@@ -125,7 +116,15 @@ fi
 ```
 
 
-### gtk theme
+### compile with all threads
+/etc/makepkg.conf\
+search MAKEFLAGS & set to:
+```
+MAKEFLAGS="-j$(nproc)"
+```
+
+
+### ~~gtk theme~~
 [github](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) with install instructions (aur package is trash)
 for install script use this command
 ```bash
@@ -134,7 +133,7 @@ mkdir ~/.themes &
 ```
 
 
-### qt theme
+### ~~qt theme~~
 
 needed qt6ct qt5ct also possible
 ```bash
@@ -160,11 +159,4 @@ paru -Sccd
 flatpak update 
 # nvim 
 Lazy
-```
-
-### compile with all threads
-/etc/makepkg.conf
-search MAKEFLAGS & set to:
-```
-MAKEFLAGS="-j$(nproc)"
 ```

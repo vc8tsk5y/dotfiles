@@ -17,7 +17,7 @@
         "darkSchemeTextColor": "#d4be98",
         "lightSchemeBackgroundColor": "#dcdad7",
         "lightSchemeTextColor": "#181a1b",
-        "scrollbarColor": "#d4be98",
+        "scrollbarColor": "#7c6f64",
         "selectionColor": "#7daea3",
         "styleSystemControls": false,
         "lightColorScheme": "Default",
@@ -26,15 +26,24 @@
     },
     "presets": [],
     "customThemes": [],
-    "enabledByDefault": true,
-    "enabledFor": [],
+    "enabledByDefault": false,
+    "enabledFor": [
+        "calendar.google.com",
+        "moodle.thm.de",
+        "www.theverge.com",
+        "news.ycombinator.com",
+        "chatgpt.com",
+        "nixos.wiki",
+        "en.wikipedia.org",
+        "endremastered.fandom.com"
+    ],
     "disabledFor": [],
     "changeBrowserTheme": false,
     "syncSettings": true,
     "syncSitesFixes": false,
     "automation": {
         "enabled": false,
-        "mode": "",
+        "mode": "system",
         "behavior": "OnOff"
     },
     "time": {
@@ -46,16 +55,19 @@
         "longitude": null
     },
     "previewNewDesign": true,
+    "previewNewestDesign": false,
     "enableForPDF": true,
     "enableForProtectedPages": false,
     "enableContextMenus": false,
     "detectDarkTheme": false,
     "displayedNews": [
         "news-2023",
-        "thanks-2023"
+        "thanks-2023",
+        "g-search-crash"
     ],
     "readNews": [
         "news-2023",
-        "thanks-2023"
+        "thanks-2023",
+        "g-search-crash"
     ]
 }

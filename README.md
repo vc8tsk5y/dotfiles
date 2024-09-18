@@ -38,6 +38,13 @@ ln -sf ~/dotfiles/.config/hypr/* ~/.config/hypr/
 ```
 
 
+### ags
+```bash
+ags --init
+ln -sf ~/dotfiles/.config/ags/* ~/.config/ags/
+```
+
+
 ### rofi
 ```bash
 mkdir -p ~/.config/rofi

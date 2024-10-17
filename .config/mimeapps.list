@@ -6,10 +6,10 @@ image/jpeg=imv.desktop
 
 inode/directory=pcmanfm.desktop
 
-application/pdf=zen-browser.desktop
+application/pdf=zen-alpha.desktop
 
-text/html=zen-browser.desktop
-x-scheme-handler/about=zen-browser.desktop
-x-scheme-handler/http=zen-browser.desktop
-x-scheme-handler/https=zen-browser.desktop
-x-scheme-handler/unknown=zen-browser.desktop
+text/html=zen-alpha.desktop
+x-scheme-handler/about=zen-alpha.desktop
+x-scheme-handler/http=zen-alpha.desktop
+x-scheme-handler/https=zen-alpha.desktop
+x-scheme-handler/unknown=zen-alpha.desktop

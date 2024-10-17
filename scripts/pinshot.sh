@@ -1,4 +1,5 @@
 #!/bin/sh
 
-grimshot save anything ~/Downloads/pin.png
-imv ~/Downloads/pin.png && rm -fr ~/Downloads/pin.png
+grimblast save area ~/Downloads/pin.png
+if [ -f ~/Downloads/pin.png ]; then
+    imv ~/Downloads/pin.png && rm -fr ~/Downloads/pin.png

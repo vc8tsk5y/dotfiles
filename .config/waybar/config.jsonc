@@ -1,38 +1,171 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
     "spacing": 4,
-    "margin-left": 0,
-    "margin-bottom": 0,
-    "margin-top": 0,
-    "margin-right": 0,
-    "fixed-center": true,
     "reload_style_on_change": true,
 
     // Choose the order of the modules
     "modules-left": [
-        "group/power",
-        "tray",
-        "network",
-        "custom/separator",
-        "mpris",
-        "cpu",
-        "group/audio",
-    ],
-    "modules-center": [
         "hyprland/workspaces",
     ],
-    "modules-right": [
-        "group/backlight",
-        "battery",
+    "modules-center": [
         "clock",
+    ],
+    "modules-right": [
         "custom/swaync",
+        "idle_inhibitor",
+        "backlight",
+        // "group/backlight",
+        "network",
+        "battery",
+        "pulseaudio",
+        // "group/audio",
+        "tray",
     ],
 
     // Modules configuration
+    "hyprland/workspaces": {
+        "all-outputs": true, // how to treat workspaces on different monitors
+        "move-to-monitor": true,
+        "show-special": true, // does not respect when changing monitor
+    },
+
+    "tray": {
+        "show-passive-items": true,
+        "spacing": 8,
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀",
+        "format-linked": "󰌷",
+        "format-disconnected": "󰤮",
+        "tooltip": true,
+        "tooltip-format-wifi": "{essid} {signalStrength}%",
+        "tooltip-format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format-linked": "{ifname} (No IP)",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "kitty nmtui",
+    },
+
+    "pulseaudio": {
+        "format": "{icon}", // add {format_source} for mic volume
+        "format-bluetooth": "{icon} ",
+        "format-bluetooth-muted": "󰝟 ",
+        "format-muted": "󰝟",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"],
+        },
+        "on-click-right": "kitty pulsemixer",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": true,
+        "tooltip-format": "{volume}%"
+    },
+
+    "mpris": {
+        "format": "{status_icon}",
+        "status-icons": {
+            "playing": "",
+            "paused": "",
+            "stopped": "",
+        }
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon}",
+        "scroll-step": 10,
+        //"format-icons": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "brightnessctl set +10%",
+        "on-scroll-down": "brightnessctl set 10%-",
+        "tooltip": true,
+        "tooltip-format": "{percent}%"
+    },
+
+    "custom/swaync": {
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂚",
+            "dnd-notification": "󰂠",
+            "dnd-none": "󰂠",
+            "inhibited-notification": "󱅫",
+            "inhibited-none": "󰂚",
+            "dnd-inhibited-notification": "󰂠",
+            "dnd-inhibited-none": "󰂠"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true,
+        "tooltip": false,
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-full": "{icon}",
+        "format-time": "{H}:{M}",
+        //"format-charging": "{capacity}% ",
+        //"format-plugged": "{capacity}% ",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip-format": "{timeTo} {capacity}%",
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%A %d.%m.%y}",
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰒳",
+            "deactivated": "󰒲"
+        }
+    },
+
+
+
+
+
+
+    "group/audio": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true,
+        },
+        "modules": [
+            "pulseaudio", // First element is the "group leader" and won't ever be hidden
+            "pulseaudio/slider",
+        ]
+    },
+
+    "group/backlight": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "backlight", // First element is the "group leader" and won't ever be hidden
+            "backlight/slider",
+        ]
+    },
+
     "custom/separator": {
         "format": "",
         "on-click": "~/dotfiles/scripts/toggle-keybard.sh"
@@ -84,46 +217,6 @@
         "on-click": "hyprctl dispatch exit"
     },
 
-    "hyprland/workspaces": {
-        "all-outputs": true,
-        "move-to-monitor": true,
-    },
-
-    "group/audio": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 500,
-            "transition-left-to-right": true,
-        },
-        "modules": [
-            "pulseaudio", // First element is the "group leader" and won't ever be hidden
-            "pulseaudio/slider",
-        ]
-    },
-
-    "pulseaudio": {
-        "format": "{icon} {volume}%", // add {format_source} for mic volume
-        "format-bluetooth": "{icon}  {volume}%",
-        "format-bluetooth-muted": "󰝟 ",
-        "format-muted": "󰝟",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
-        "format-icons": {
-            "default": ["󰕿", "󰖀", "󰕾"],
-        },
-        "on-click-right": "kitty pulsemixer",
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    },
-
-    "mpris": {
-        "format": "{status_icon}",
-        "status-icons": {
-            "playing": "",
-            "paused": "",
-            "stopped": "",
-        }
-    },
-
     "cpu": {
         "format": " {usage}%",
         "tooltip": false,
@@ -134,105 +227,5 @@
         "format-icons": ["", "", "", "", "",],
         "critical-threshold": 80,
         "format-critical": " {temperatureC}°C",
-    },
-
-    "group/backlight": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 500,
-            "transition-left-to-right": false,
-        },
-        "modules": [
-            "backlight", // First element is the "group leader" and won't ever be hidden
-            "backlight/slider",
-        ]
-    },
-
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
-        "scroll-step": 10,
-        //"format-icons": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "brightnessctl set +10%",
-        "on-scroll-down": "brightnessctl set 10%-",
-    },
-
-    "custom/swaync": {
-        "format": "{icon}",
-        "format-icons": {
-            "notification": "",
-            "none": "",
-            "dnd-notification": "",
-            "dnd-none": "",
-            "inhibited-notification": "",
-            "inhibited-none": "",
-            "dnd-inhibited-notification": "",
-            "dnd-inhibited-none": ""
-        },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true,
-        "tooltip": false,
-    },
-
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity}%",
-        "format-full": "{icon} {capacity}%",
-        "format-time": "{H}:{M}",
-        //"format-charging": "{capacity}% ",
-        //"format-plugged": "{capacity}% ",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "tooltip-format": "{timeTo}",
-    },
-
-    "clock": {
-        "format": "{:%H:%M}",
-        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>", // original (see no difference to new)
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode"          : "year",
-            "mode-mon-col"  : 3,
-            "weeks-pos"     : "left",
-            "on-scroll"     : 1,
-            "format": {
-                "months":     "<span color='#8ccf7e'><b>{}</b></span>",
-                "days":       "<span color='#dadada'><b>{}</b></span>",
-                "weeks":      "<span color='#e5c76b'><b>W{}</b></span>",
-                "weekdays":   "<span color='#67b0e8'><b>{}</b></span>",
-                "today":      "<span color='#8ccf7e'><b><u>{}</u></b></span>",
-            },
-        },
-    },
-
-
-
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    "tray": {
-        "spacing": 8,
-    },
-
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
-        "format-wifi": "{icon} {essid} {signalStrength}%",
-        "format-ethernet": "󰈀 {ipaddr}/{cidr}",
-        "format-linked": "󰌷 {ifname} (No IP)",
-        "format-disconnected": "󰤯 Disconnected",
-        "tooltip": false,
     },
 }

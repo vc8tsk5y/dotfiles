@@ -1,47 +1,52 @@
-@define-color background0 #141b1e;
-@define-color background1 #232a2d;
-@define-color background2 #2d3437;
-@define-color red #e57474;
-@define-color green #8ccf7e;
-@define-color yellow #e5c76b;
-@define-color blue #67b0e8;
-@define-color magenta #c47fd5;
-@define-color cyan #6cbfbf;
-@define-color white0 #dadada;
-@define-color white1 #b3b9b8;
-@define-color white2 #8e979a;
+@define-color bgDim #141617;
+@define-color bg0 #1d2021;
+@define-color bg1 #282828;
+@define-color bg2 #3c3836;
+@define-color bg3 #504945;
+@define-color grey0 #7c6f64;
+@define-color grey1 #928374;
+@define-color grey2 #a89984;
+@define-color fg0 #d4be98;
+@define-color fg1 #ddc7a1;
+@define-color red #ea6962;
+@define-color orange #e78a4e;
+@define-color yellow #d8a657;
+@define-color green #a9b665;
+@define-color aqua #89b482;
+@define-color blue #7daea3;
+@define-color purple #d3869b;
+@define-color redDim #3c1f1e;
+@define-color greenDim #32361a;
+@define-color blueDim #0d3138;
+@define-color redBg #442e2d;
+@define-color yellowBg #473c29;
+@define-color greenBg #333e34;
+@define-color blueBg #2e3b3b;
 
 * {
     /* important to reset all setings set by gtk theme */
     all: initial;
     font-family: FiraCode Nerd Font;
     font-size: 16px;
-    color: @white0;
+    color: @fg0;
 }
 
 window#waybar {
-    color: @white0;
-    background-color: @background0;
+    color: @fg0;
+    background-color: @bg0;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
-/* not working should make bar transparent when workspace is empty https://www.reddit.com/r/unixporn/comments/1c3ptie/hyprland_bar_is_the_only_thing_i_like_about_this/ */
-
-window#waybar.empty,
-window#waybar.floating {
-    background-color: transparent;
-}
-
 tooltip {
-    background: @background0;
+    background: @bg0;
     border-color: @green;
     border-width: 0px;
-    border-radius: 2px;
+    border-radius: 8px;
     border-style: solid;
 }
 tooltip label {
-    color: @white0;
+    color: @fg0;
 }
 
 .module {
@@ -50,27 +55,32 @@ tooltip label {
 
 
 #workspaces {
-    background-color: transparent;
-    color: @blue; /*somehow does not work but why*/
+    border-color: @green;
+    border-width: 0px;
+    border-radius: 8px;
+    border-style: solid;
 }
 #workspaces button {
     padding: 0 8px;
-    border-radius: 2px;
-    background-color: @background0;
+    border-radius: 4px;
+    background-color: transparent;
 }
 #workspaces button.empty {
+    color: @blue;
 }
 #workspaces button.visible {
-    background-color: @background1;
+    color: @blue;
 }
 #workspaces button.urgent {
-    background-color: @red;
+    /* background-color: @red; */
 }
 #workspaces button.active {
-    background-color: @blue;
+    /* background-color: @blue; */
+    color: @blue;
+    text-decoration: underline;
 }
 #workspaces button:hover {
-    background-color: @white2;
+    background-color: @greenDim;
     box-shadow: inherit;
     text-shadow: inherit;
 }
@@ -84,7 +94,7 @@ tooltip label {
 #backlight-slider slider {
 }
 #backlight-slider trough {
-    background-color: @background2;
+    background-color: @bg2;
     min-height: 10px;
     min-width: 100px;
     border-radius: 2px;
@@ -99,7 +109,7 @@ tooltip label {
 #pulseaudio-slider slider {
 }
 #pulseaudio-slider trough {
-    background-color: @background2;
+    background-color: @bg2;
     min-height: 10px;
     min-width: 100px;
     border-radius: 2px;
@@ -109,22 +119,15 @@ tooltip label {
     border-radius: 2px;
 }
 
-#custom-swaync {
-    background-color: @background2;
-    border-radius: 16px;
-    padding-right: 12px;
-}
-
 #tray {
-    background-color: @background2;
-    border-radius: 16px;
+    background-color: @bg1;
 }
 #tray menu {
-    background-color: @background0;
-    border-radius: 2px;
-    border-style: solid;
+    background: @bg0;
     border-color: @green;
-    border-width: 2px;
+    border-width: 0px;
+    border-radius: 8px;
+    border-style: solid;
     padding: 8px;
 }
 #tray > .passive {

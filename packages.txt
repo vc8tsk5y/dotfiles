@@ -1,7 +1,7 @@
 paru     # manual install
 
 git
-    neovim
+neovim
     unzip
     ripgrep
     fd
@@ -13,12 +13,12 @@ fastfetch
 lsd
 fzf
 man-db
+man-pages
 tldr
 trash-cli
 cronie
 reflector
 zsh
-    zsh-autocomplete
     zsh-autopair-git
     zsh-autosuggestions
     zsh-syntax-highlighting
@@ -30,6 +30,7 @@ difftastic
 firewalld
 openconnect
 bat
+yazi
 
 # laptop specific
 tlp
@@ -51,11 +52,13 @@ hyprland
     qt5-wayland qt6-wayland
 
 #Desktop environment
-grimshot
-polkit-kde-agent
+grimblast
+polkit-kde-agent swap for hypr polkit agent by vaxry
 cliphist
 rofi-lbonn-wayland-git
     rofimoji
+ulauncher
+anyrun
 waybar
 swaync
 

@@ -19,8 +19,8 @@ export PATH="$PATH:$HOME/.local/bin"
 unsetopt beep
 
 # Enable command auto-completion
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 
 # Plugins and Configurations
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
@@ -29,23 +29,42 @@ source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
+# yazi shell wrapper
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
 # shell integrations
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"  # change command (zoxide init --cmd cd zsh)
 
 # fzf-tab config
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+# NOTE: don't use escape sequences here, fzf-tab will ignore them
 zstyle ':completion:*:descriptions' format '[%d]'
-# preview directory's content with lsd when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -A --color=always $realpath'
 # set list-colors to enable filename colorizing
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+# preview directory's content with lsd when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -1A --color=always $realpath'
+#zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+# switch group using `<` and `>`
+zstyle ':fzf-tab:*' switch-group '<' '>'
+# for the usage in tmux
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 # completions show hidden files
 setopt globdots
 
@@ -67,3 +86,10 @@ alias f='kitty -d $(pwd) & disown'
 # Defaults
 export EDITOR="nvim"
 export VISUAL="nvim"
+
+# bun completions
+[ -s "/home/tim/.bun/_bun" ] && source "/home/tim/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

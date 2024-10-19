@@ -1,0 +1,71 @@
+* {
+    bgDim: #1b1b1b;
+    bg0: #282828;
+    bg1: #32302f;
+    bg2: #45403d;
+    bg3: #5a524c;
+    grey0: #7c6f64;
+    grey1: #928374;
+    grey2: #a89984;
+    fg0: #d4be98;
+    fg1: #ddc7a1;
+    red: #ea6962;
+    orange: #e78a4e;
+    yellow: #d8a657;
+    green: #a9b665;
+    aqua: #89b482;
+    blue: #7daea3;
+    purple: #d3869b;
+    redDim: #402120;
+    greenDim: #34381b;
+    blueDim: #0e363e;
+    redBg: #4c3432;
+    yellowBg: #4f422e;
+    greenBg: #3b4439;
+    blueBg: #374141;
+
+  border-radius: 2px;
+  background-color: @bg0;
+  text-color: @fg0;
+}
+
+window {
+  location: center;
+  width: 25%;
+  spacing: 0;
+  children: [ box ];
+}
+
+box {
+  padding: 8px;
+  spacing: 5px;
+  children: [ entry, listview ];
+}
+
+entry {
+  /* placeholder: "Search..."; */
+  placeholder-color: @fg1;
+  padding: 8px;
+  expand: false;
+}
+
+element {
+  text-color: @fg1;
+  padding: 8px;
+  orientation: horizontal;
+  children: [ element-icon, element-text];
+  spacing: 4px;
+}
+element selected {
+  text-decoration: underline;
+  text-color: @green;
+  background-color: @bg1;
+}
+element-text, element-icon {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+listview {
+  lines: 12;
+}

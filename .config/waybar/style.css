@@ -1,8 +1,8 @@
-@define-color bgDim #141617;
-@define-color bg0 #1d2021;
-@define-color bg1 #282828;
-@define-color bg2 #3c3836;
-@define-color bg3 #504945;
+@define-color bgDim #1b1b1b;
+@define-color bg0 #282828;
+@define-color bg1 #32302f;
+@define-color bg2 #45403d;
+@define-color bg3 #5a524c;
 @define-color grey0 #7c6f64;
 @define-color grey1 #928374;
 @define-color grey2 #a89984;
@@ -15,27 +15,28 @@
 @define-color aqua #89b482;
 @define-color blue #7daea3;
 @define-color purple #d3869b;
-@define-color redDim #3c1f1e;
-@define-color greenDim #32361a;
-@define-color blueDim #0d3138;
-@define-color redBg #442e2d;
-@define-color yellowBg #473c29;
-@define-color greenBg #333e34;
-@define-color blueBg #2e3b3b;
+@define-color redDim #402120;
+@define-color greenDim #34381b;
+@define-color blueDim #0e363e;
+@define-color redBg #4c3432;
+@define-color yellowBg #4f422e;
+@define-color greenBg #3b4439;
+@define-color blueBg #374141;
 
 * {
     /* important to reset all setings set by gtk theme */
     all: initial;
-    font-family: FiraCode Nerd Font;
-    font-size: 16px;
-    color: @fg0;
 }
 
 window#waybar {
-    color: @fg0;
     background-color: @bg0;
     transition-property: background-color;
     transition-duration: .5s;
+}
+window#waybar label {
+    font-family: FiraCode Nerd Font;
+    font-size: 16px;
+    color: @fg0;
 }
 
 tooltip {
@@ -53,37 +54,53 @@ tooltip label {
     padding: 0 8px;
 }
 
-
 #workspaces {
-    border-color: @green;
+    /* border-color: @green; */
+    /* border-width: 2px; */
+    /* border-radius: 8px; */
+    /* border-style: solid; */
+}
+#workspaces button {
+    padding: 0 4px;
+}
+#workspaces button.visible label {
+}
+#workspaces button.empty label {
+    color: @grey0;
+}
+#workspaces button.active label {
+}
+#workspaces button.hosting-monitor label {
+    font-weight: bold;
+}
+#workspaces button:not(.visible) label {
+    color: @fg0;
+    font-weight: normal;
+}
+#workspaces button:hover label {
+    /* box-shadow: inherit; */
+    /* text-shadow: inherit; */
+    color: @bg3;
+}
+
+#tray {
+    background-color: @bg1;
+}
+#tray menu {
+    background: @bg0;
     border-width: 0px;
     border-radius: 8px;
     border-style: solid;
+    padding: 8px;
 }
-#workspaces button {
-    padding: 0 8px;
-    border-radius: 4px;
-    background-color: transparent;
+#tray > .passive {
 }
-#workspaces button.empty {
-    color: @blue;
+#tray > .active {
 }
-#workspaces button.visible {
-    color: @blue;
+#tray > .needs-attention {
 }
-#workspaces button.urgent {
-    /* background-color: @red; */
-}
-#workspaces button.active {
-    /* background-color: @blue; */
-    color: @blue;
-    text-decoration: underline;
-}
-#workspaces button:hover {
-    background-color: @greenDim;
-    box-shadow: inherit;
-    text-shadow: inherit;
-}
+
+
 
 #custom-separator {
     color: @green;
@@ -117,22 +134,4 @@ tooltip label {
 #pulseaudio-slider highlight {
     background-color: @green;
     border-radius: 2px;
-}
-
-#tray {
-    background-color: @bg1;
-}
-#tray menu {
-    background: @bg0;
-    border-color: @green;
-    border-width: 0px;
-    border-radius: 8px;
-    border-style: solid;
-    padding: 8px;
-}
-#tray > .passive {
-}
-#tray > .active {
-}
-#tray > .needs-attention {
 }

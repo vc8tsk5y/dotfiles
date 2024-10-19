@@ -13,15 +13,15 @@
         "clock",
     ],
     "modules-right": [
-        "custom/swaync",
         "idle_inhibitor",
-        "backlight",
+        // "backlight",
         // "group/backlight",
         "network",
         "battery",
-        "pulseaudio",
+        // "pulseaudio",
         // "group/audio",
         "tray",
+        "custom/swaync",
     ],
 
     // Modules configuration

@@ -13,7 +13,7 @@
         "textStroke": 0,
         "engine": "dynamicTheme",
         "stylesheet": "",
-        "darkSchemeBackgroundColor": "#1d2021",
+        "darkSchemeBackgroundColor": "#282828",
         "darkSchemeTextColor": "#d4be98",
         "lightSchemeBackgroundColor": "#dcdad7",
         "lightSchemeTextColor": "#181a1b",
@@ -35,7 +35,11 @@
         "chatgpt.com",
         "nixos.wiki",
         "en.wikipedia.org",
-        "endremastered.fandom.com"
+        "endremastered.fandom.com",
+        "wiki.gentoo.org",
+        "el.htv-online.de",
+        "localhost:50001",
+        "ecampus.thm.de"
     ],
     "disabledFor": [],
     "changeBrowserTheme": false,
@@ -65,6 +69,11 @@
         "thanks-2023",
         "g-search-crash"
     ],
+    "installation": {
+        "date": 1726496731741,
+        "reason": "update",
+        "version": "4.9.89"
+    },
     "readNews": [
         "news-2023",
         "thanks-2023",

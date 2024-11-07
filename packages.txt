@@ -1,4 +1,5 @@
-paru     # manual install
+yay     # manual install
+nix
 
 git
 neovim
@@ -18,6 +19,8 @@ tldr
 trash-cli
 cronie
 reflector
+fish
+    fisher
 zsh
     zsh-autopair-git
     zsh-autosuggestions
@@ -31,8 +34,12 @@ firewalld
 openconnect
 bat
 yazi
+kanata
 
 # laptop specific
+bluez
+    bluez-utils
+    blueman
 tlp
     tlp-rdw
     ethtool
@@ -73,10 +80,12 @@ R-studio
 kitty
 foot
 pulsemixer
+pavucontrol
 easyeffects
 imv
 yt-dlp
 firefox
+chromium
 vesktop
 thunderbird
 gimp

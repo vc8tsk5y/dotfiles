@@ -1,0 +1,1 @@
+/home/tim/dotfiles/.config/fish/config.fish

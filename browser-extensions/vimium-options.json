@@ -1,5 +1,6 @@
 {
   "keyMappings": "map J nextTab\nmap K previousTab",
+  "linkHintCharacters": "arstneiogmqwfpluyzxcdh",
   "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\nsp: https://www.startpage.com/do/search?q=%s Startpage\ny: https://www.youtube.com/results?search_query=%s Youtube\nym: https://music.youtube.com/search?q=%s Youtube Music\ngm: https://www.google.com/maps?q=%s Google maps\nbing: https://www.bing.com/search?q=%s Bing\nddg: https://duckduckgo.com/?q=%s DuckDuckGo\naz: https://www.amazon.de/s/?field-keywords=%s Amazon\nqw: https://www.qwant.com/?q=%s Qwant\nugg: https://u.gg/opensearch/?query=%s U.gg\npdb: https://www.protondb.com/search?q=%s protonDB\n\n\n# More examples.\n#\n# (Vimium supports search completion Wikipedia, as\n# above, and for these.)\n#\n# l: https://www.google.com/search?q=%s&btnI I'm feeling lucky...",
   "searchUrl": "https://www.google.com/search?q=%s",
   "settingsVersion": "2.1.2",

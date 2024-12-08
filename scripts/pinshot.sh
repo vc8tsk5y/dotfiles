@@ -1,6 +1,6 @@
 #!/bin/sh
 
-grimblast save area ~/Downloads/pin.png
-if [ -f ~/Downloads/pin.png ]; then
-    imv ~/Downloads/pin.png && rm -fr ~/Downloads/pin.png
+grimblast save area ~/.local/share/pin.png
+if [ -f ~/.local/share/pin.png ]; then
+    hyprctl dispatch exec "[float] imv ~/.local/share/pin.png"
 fi

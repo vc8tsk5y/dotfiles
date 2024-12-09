@@ -30,30 +30,41 @@ const time = Variable('', {
     }],
 })
 
-const myLabel = Widget.Label({
-    label: 'some example content',
-})
 
-const Bar = (monitor) => Widget.Window({
-    monitor,
-    name: `bar${monitor}`,
-    anchor: ['bottom', 'left', 'right'],
-    //exclusivity: 'exclusive', // bar free up windowmanager space
-    child: Widget.CenterBox({
-        start_widget: Widget.Label({
-            hpack: 'center',
-            label: 'Welcome to AGS!',
-        }),
-        center_widget: Widget.Label({
-            hpack: 'center',
-            label: 'some text',
-        }),
-        end_widget: Widget.Label({
-            hpack: 'center',
-            label: time.bind(),
-        }),
-    }),
-})
+function Bar(monitor = 0) {
+    const myLabel = Widget.Label({
+        label: 'some example content',
+    })
+    const zeit = Widget.Label({
+        label: time.bind()
+    })
+    return Widget.Window({
+        monitor,
+        name: `bar${monitor}`,
+        anchor: ['bottom', 'left', 'right'],
+        child: zeit,
+    })
+}
+//const Bar = (monitor) => Widget.Window({
+//    monitor,
+//    name: `bar${monitor}`,
+//    anchor: ['bottom', 'left', 'right'],
+//    //exclusivity: 'exclusive', // bar free up windowmanager space
+//    child: Widget.CenterBox({
+//        start_widget: Widget.Label({
+//            hpack: 'center',
+//            label: 'Welcome to AGS!',
+//        }),
+//        center_widget: Widget.Label({
+//            hpack: 'center',
+//            label: 'some text',
+//        }),
+//        end_widget: Widget.Label({
+//            hpack: 'center',
+//            label: time.bind(),
+//        }),
+//    }),
+//})
 
 App.config({
     windows: [

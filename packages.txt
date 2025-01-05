@@ -22,7 +22,6 @@ tldr
 trash-cli
 cronie
 zsh
-    zsh-autopair-git
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-vi-mode
@@ -51,6 +50,7 @@ hyprland
     hyprcursor
     hyprutils
     hyprpaper
+    hyprsunset
     hypridle
     hyprlock
     xdg-desktop-portal-hyprland

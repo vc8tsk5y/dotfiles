@@ -6,11 +6,11 @@ image/jpeg=imv.desktop
 
 inode/directory=pcmanfm.desktop
 
-application/pdf=zen-alpha.desktop
+application/pdf=zen-beta.desktop
 
-text/html=zen-alpha.desktop
-x-scheme-handler/about=zen-alpha.desktop
-x-scheme-handler/http=zen-alpha.desktop
-x-scheme-handler/https=zen-alpha.desktop
-x-scheme-handler/unknown=zen-alpha.desktop
-x-scheme-handler/webcal=zen-alpha.desktop
+text/html=zen-beta.desktop
+x-scheme-handler/about=zen-beta.desktop
+x-scheme-handler/http=zen-beta.desktop
+x-scheme-handler/https=zen-beta.desktop
+x-scheme-handler/unknown=zen-beta.desktop
+x-scheme-handler/webcal=zen-beta.desktop

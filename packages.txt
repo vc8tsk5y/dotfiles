@@ -1,4 +1,4 @@
-yay     # manual install
+yay/aura     # manual install
 nix
 
 git
@@ -9,18 +9,18 @@ neovim
 smartmontools
 less
 openssh
-tmux
 fastfetch
 lsd
 fzf
+bat
+yazi
+lazygit
+difftastic
 man-db
 man-pages
 tldr
 trash-cli
 cronie
-reflector
-fish
-    fisher
 zsh
     zsh-autopair-git
     zsh-autosuggestions
@@ -29,12 +29,11 @@ zsh
     fzf-tab-git
     starship
     zoxide
-difftastic
-firewalld
 openconnect
-bat
-yazi
+firewalld
+reflector
 kanata
+tmux
 
 # laptop specific
 bluez
@@ -69,8 +68,7 @@ anyrun
 waybar
 swaync
 
-# interesting fixes
-dbus-python # needed for the ecampus thm script to make wifi work at thm
+dbus-python # THM wifi script dependency
 
 jdk-openjdk
     maven
@@ -78,7 +76,7 @@ R-studio
 
 # tools
 kitty
-foot
+ghostty
 pulsemixer
 pavucontrol
 easyeffects
@@ -114,3 +112,4 @@ tesseract-data-deu
 ttf-twemoji
 noto-fonts
 noto-fonts-emoji
+noto-fonts-cjk

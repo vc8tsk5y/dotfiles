@@ -57,7 +57,7 @@ ln -sf ~/dotfiles/.config/kitty/themes/* ~/.config/kitty/themes/
 ### waybar
 ```bash
 mkdir -p ~/.config/waybar &
-ln -sf ~/dotfiles/.config/waybar/config.jsonc ~/.config/waybar/
+ln -sf ~/dotfiles/.config/waybar/config.jsonc ~/.config/waybar/ &
 ln -sf ~/dotfiles/.config/waybar/style.css ~/.config/waybar/
 ```
 

@@ -189,7 +189,7 @@
     "custom/rofi": {
         "format": "󰣇",
         "tooltip": false,
-        "on-click": "/home/tim/dotfiles/.config/rofi/scripts/scripts.sh"
+        "on-click": "/home/tim/dotfiles/scripts/rofi/scripts.sh"
     },
     "custom/shutdown": {
         "format": "󰐥",

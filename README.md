@@ -1,5 +1,14 @@
 # dotfiles
 
+## usefull nix commands
+list all generations (new one after each nixos-rebuild
+```bash
+sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
+```
+delete all generations except the current one
+```bash
+sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations old
+```
 
 ### reflector
 ```bash
@@ -21,59 +30,58 @@ ln -sf ~/dotfiles/.zprofile ~/
 
 ### starship
 ```bash
-ln -sf ~/dotfiles/.config/starship.toml ~/.config/
+ln -sf ~/dotfiles/config/starship.toml ~/.config/
 ```
 
 
 ### fastfetch
 ```bash
 mkdir -p ~/.config/fastfetch &
-ln -sf ~/dotfiles/.config/fastfetch/config.jsonc ~/.config/fastfetch/
+ln -sf ~/dotfiles/config/fastfetch/config.jsonc ~/.config/fastfetch/
 ```
 
 
 ### hyprland, autostart, hyprpaper, hypridle, hyprlock
 ```bash
 mkdir -p ~/.config/hypr &
-ln -sf ~/dotfiles/.config/hypr/* ~/.config/hypr/
+ln -sf ~/dotfiles/config/hypr/* ~/.config/hypr/
 ```
 
 
 ### rofi
 ```bash
 mkdir -p ~/.config/rofi
-ln -sf ~/dotfiles/.config/rofi/*.rasi ~/.config/rofi/
+ln -sf ~/dotfiles/config/rofi/*.rasi ~/.config/rofi/
 ```
 
 
 ### kitty
 ```bash
 mkdir -p ~/.config/kitty/themes &
-ln -sf ~/dotfiles/.config/kitty/* ~/.config/kitty/ &
-ln -sf ~/dotfiles/.config/kitty/themes/* ~/.config/kitty/themes/
+ln -sf ~/dotfiles/config/kitty/*.conf ~/.config/kitty/ &
+ln -sf ~/dotfiles/config/kitty/themes/* ~/.config/kitty/themes/
 ```
 
 
 ### waybar
 ```bash
 mkdir -p ~/.config/waybar &
-ln -sf ~/dotfiles/.config/waybar/config.jsonc ~/.config/waybar/ &
-ln -sf ~/dotfiles/.config/waybar/style.css ~/.config/waybar/
+ln -sf ~/dotfiles/config/waybar/* ~/.config/waybar/
 ```
 
 
-### swaync
+### swaync doesnt even exist in my config
 ```bash
 mkdir -p ~/.config/swaync &
-ln -sf ~/dotfiles/.config/swaync/* ~/.config/swaync/
+ln -sf ~/dotfiles/config/swaync/* ~/.config/swaync/
 ```
 
 
 ### mimetypes
 
 ```bash
-ln -sf ~/dotfiles/.config/mimeapps.list ~/.config/
-ln -sf ~/dotfiles/.config/mimeapps.list ~/.local/share/applications/
+ln -sf ~/dotfiles/config/mimeapps.list ~/.config/
+ln -sf ~/dotfiles/config/mimeapps.list ~/.local/share/applications/
 ```
 
 
@@ -134,7 +142,7 @@ important: follow suggestings from error messages
 ### ~~ags~~
 ```bash
 ags --init
-ln -sf ~/dotfiles/.config/ags/* ~/.config/ags/
+ln -sf ~/dotfiles/config/ags/* ~/.config/ags/
 ```
 
 
@@ -148,15 +156,15 @@ ln -sf ~/dotfiles/.bash_profile ~/
 ### ~~fish~~
 ```bash
 mkdir -p ~/.config/fish/functions &
-ln -sf ~/dotfiles/.config/fish/* ~/.config/fish/
-ln -sf ~/dotfiles/.config/fish/functions/* ~/.config/fish/functions/
+ln -sf ~/dotfiles/config/fish/* ~/.config/fish/
+ln -sf ~/dotfiles/config/fish/functions/* ~/.config/fish/functions/
 ```
 
 
 ### ~~foot~~
 ```bash
 mkdir -p ~/.config/foot &
-ln -sf ~/dotfiles/.config/foot/* ~/.config/foot/
+ln -sf ~/dotfiles/config/foot/* ~/.config/foot/
 ```
 
 
@@ -174,6 +182,6 @@ mkdir ~/.themes &
 needed qt6ct qt5ct also possible
 ```bash
 mkdir ~/.config/qt6ct/colors &
-ln -sf ~/dotfiles/.config/qt6ct/colors/*.conf ~/.config/qt6ct/colors/
+ln -sf ~/dotfiles/config/qt6ct/colors/*.conf ~/.config/qt6ct/colors/
 ```
 now open qt6ct and apply settings
